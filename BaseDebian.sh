@@ -1,5 +1,7 @@
 #!/bin/bash
 
+##########   Working as of March 26 2025 - Select Debian with no dektop environnement ex. KDE, gnome, etc...
+
 #Link Debian-testing weekly build iso amd64
 #https://cdimage.debian.org/cdimage/weekly-builds/amd64/iso-cd/debian-testing-amd64-netinst.iso
 
@@ -7,7 +9,7 @@
 #apt install git
 #cd /usr/local/bin
 #git clone https://github.com/Jackblow33/DebianMultiScripts.git
-#cd DebianMultiScripts
+#mv /DebianMultiScripts/BaseDebian.sh /usr/local/bin
 #chmod +x BaseDebian.sh
 #./BaseDebian.sh
 
