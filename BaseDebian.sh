@@ -22,13 +22,7 @@ PKGS=(
         'kmenuedit'
         'firefox-esr'
         'fastfetch'
-
-# Soon Bluetooth PKGS
-#bluedevil
-#bluetooth
-
-
-        )
+)
 
 for PKG in "${PKGS[@]}"; do
     echo "INSTALLING: ${PKG}"
@@ -45,3 +39,7 @@ echo
     #Enable sddm so it get started on boot
     #sudo systemctl enable sddm
     #sudo systemctl start sddm
+
+    # Soon Bluetooth PKGS
+#bluedevil
+#bluetooth
