@@ -1,0 +1,87 @@
+#Insert Line Beginning of File
+#sed '1 s/^/This will be the first line of the file\n/' myfile.txt
+#an other example
+sudo sed -i 's|#AutoEnable=false|AutoEnable=true|g' /etc/bluetooth/main.conf
+
+
+
+#######################
+# Post-install APPS ###
+#######################
+
+#Wifi drivers for mac
+sudo apt install bcmwl-kernel-source
+
+#Bluetooth
+#sudo apt install bluedevil bluetooth
+sudo apt install bluetooth pulseaudio-module-bluetooth; sudo killall pulseaudio
+
+#Unrar
+sudo apt update
+sudo apt install unrar
+
+#vlc
+sudo apt install vlc
+
+#neofetch
+sudo apt install neofetch
+
+#fastfetch Debian
+sudo apt-get update
+apt-get install fastfetch
+#make it load auto load
+sudo nano /home/.bashrc
+#add at the end: fastfetch
+
+###Ubuntu fastfetch
+sudo add-apt-repository ppa:zhangsongcui3371/fastfetch
+sudo apt update
+sudo apt install fastfetch
+
+#timeshift (Backup/Restore utility)
+sudo apt install timeshift
+
+#Remove firefox-esr & install firefox
+sudo apt update
+sudo apt upgrade
+sudo apt remove firefox-esr
+sudo apt install firefox
+
+#Steam      https://wiki.debian.org/Steam
+sudo nano /etc/apt/sources.list
+#edit like following line, add contrib non-free
+#deb http://deb.debian.org/debian/ trixie main non-free-firmware contrib non-free
+#Enable Multi-Arch
+dpkg --add-architecture i386
+#Update the list of available packages
+apt update
+#Install steam-installer
+apt install steam-installer
+#For amd64 (64-bit) systems, additional libraries need to be installed for Vulkan and 32-bit titles
+apt install mesa-vulkan-drivers libglx-mesa0:i386 mesa-vulkan-drivers:i386 libgl1-mesa-dri:i386
+
+#Flatpak  https://flatpak.org/setup/Debian
+sudo apt install flatpak
+#If you are running GNOME, it is also a good idea to install the Flatpak plugin
+#sudo apt install gnome-software-plugin-flatpak
+#If you are running KDE, you should instead install the Plasma Discover Flatpak backend
+sudo apt install plasma-discover-backend-flatpak
+#Add the Flathub repository
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+#Reboot
+#Flatseal  https://christitus.com/flatseal-required-flatpak-addon/
+flatpak install flathub com.github.tchx84.Flatseal
+
+#Install an other desktop environnement
+#sudo tasksel
+
+#########
+# Purge #
+#########
+
+dragonplayer
+libreoffice-math && sudo apt autoremove libreoffice-uiconfig-math
+sudo apt remove juk
+akregator
+sudo apt remove konqueror
+
