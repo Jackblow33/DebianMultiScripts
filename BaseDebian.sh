@@ -35,7 +35,7 @@ for PKG in "${PKGS[@]}"; do
 done
 sudo apt autoremove zutty kwalletmanager kdeconnect
 echo
-echo "Done!"
+echo "Congratulation!"
 echo
 --------------------------------------------------------------------
     
