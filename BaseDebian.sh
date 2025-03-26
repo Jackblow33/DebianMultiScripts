@@ -36,14 +36,13 @@ for PKG in "${PKGS[@]}"; do
     sudo apt install -S "$PKG"
 done
 
-    
-    #Enable Network manager
-    sudo systemctl enable NetworkManager
-    sudo systemctl start NetworkManager
-    #Enable sddm so it get started on boot
-    sudo systemctl enable sddm
-    sudo systemctl start sddm
-
 echo
 echo "Done!"
 echo
+
+    #Enable Network manager
+    #sudo systemctl enable NetworkManager
+    #sudo systemctl start NetworkManager
+    #Enable sddm so it get started on boot
+    #sudo systemctl enable sddm
+    #sudo systemctl start sddm
