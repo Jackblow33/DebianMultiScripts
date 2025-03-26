@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 #Link Debian-testing weekly build iso amd64
 #https://cdimage.debian.org/cdimage/weekly-builds/amd64/iso-cd/debian-testing-amd64-netinst.iso
@@ -13,7 +13,8 @@
 echo
 echo "Base KDE Plasma instalation"
 echo
-
+# CMD='sudo apt install' #Debian -y
+# CMD='sudo pacman -S'   #Arch   --noconfirm --needed
 PKGS=(
         'kde-plasma-desktop'
         'plasma-discover'
@@ -26,7 +27,7 @@ PKGS=(
 
 for PKG in "${PKGS[@]}"; do
     echo "INSTALLING: ${PKG}"
-    sudo apt install -S "$PKG"
+    sudo apt install "$PKG"
 done
 
 echo
