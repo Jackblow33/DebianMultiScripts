@@ -11,7 +11,7 @@
 sudo su
 ##Cpu core count
 #egrep -c '(vmx|svm)' /proc/cpuinfo
-##Check if virtualisation is enable in bios
+##Check if virtualisation is enable in bios  #Intel Cpu should read: Virtualization: VT-x
 #lscpu | grep Virtualization
 apt update && apt upgrade -y
 apt install qemu-kvm qemu-utils libvirt-daemon-system libvirt-clients virtinst virt-manager
