@@ -1,7 +1,3 @@
-
-#Insert Line Beginning of File
-#sed '1 s/^/This will be the first line of the file\n/' myfile.txtapt
-
 ######################################
 # KVM - Qemu without gpu passtrough ##
 ######################################
@@ -240,6 +236,9 @@ sudo nano /etc/apparmor.d/abstractions/libvirt-qemu
 /run/udev/data/* rw,
 
 #Part 2 Setting up Virtmanager: https://www.youtube.com/watch?v=GbhUBQdMoJg
+
+#Insert Line Beginning of File
+#sed '1 s/^/This will be the first line of the file\n/' myfile.txtapt
 
 
 
