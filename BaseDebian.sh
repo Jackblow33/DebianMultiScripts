@@ -34,6 +34,7 @@ PKGS=(
 for PKG in "${PKGS[@]}"; do
     echo "INSTALLING: ${PKG}"
     sudo apt install -S "$PKG"
+    
     #Enable Network manager
     sudo systemctl enable NetworkManager
     sudo systemctl start NetworkManager
