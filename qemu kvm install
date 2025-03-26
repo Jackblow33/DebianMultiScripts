@@ -5,9 +5,9 @@
 # https://github.com/daveprowse/virtualization/blob/main/kvm/kvm-install-debian-12/kvm-install-debian-12.md
 
 ##Cpu core count
-#egrep -c '(vmx|svm)' /proc/cpuinfo
+egrep -c '(vmx|svm)' /proc/cpuinfo
 ##Check if virtualisation is enable in bios  #Intel Cpu should read: Virtualization: VT-x
-#lscpu | grep Virtualization
+lscpu | grep Virtualization
 apt update && apt upgrade -y
 apt install qemu-kvm qemu-utils libvirt-daemon-system libvirt-clients virtinst virt-manager
 
@@ -23,7 +23,7 @@ systemctl status libvirtd
 kvm --version
 
 ##Check that the KVM modules are loaded correctly.
-#lsmod | grep kvm
+lsmod | grep kvm
 
 #Sample results:
 #dpro@smauggy:~$ lsmod | grep kvm
@@ -32,7 +32,8 @@ kvm --version
 
 
 ##Run the following command to view the various components that should run in KVM:
-#sudo virt-host-validate
+sudo virt-host-validate
+#It is normal to have freezer and devices failed + some warning. Qemu lines have to be green.
 
 
 # Add a user to the libvirt group so that it can create and modify virtual machines.
