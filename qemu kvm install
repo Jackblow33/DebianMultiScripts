@@ -44,17 +44,6 @@ sudo usermod -aG kvm $USER
 sudo usermod -aG input $USER
 sudo usermod -aG disk $USER
 
-
-#### To fix firewald error you need to change firewalld backend to iptables instead of nftables
-
-#nano /etc/firewalld/firewalld.conf
-##then change:
-#FirewallBackend=nftables to FirewallBackend=iptables
-
-##Restart firewalld
-#sudo systemctl restart firewalld.service
-
-
 ##And, set it to autostart whenever the system is rebooted.
 sudo virsh net-autostart default
 
@@ -82,6 +71,20 @@ reboot
 #systemctl status spice-vdagentsudo
 #OLD_sudo nano /usr/lib/systemd/user/plasma-core.target
 #Add: spice-vdagent.service at the end of line: Wants=
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ###########
@@ -240,6 +243,18 @@ sudo nano /etc/apparmor.d/abstractions/libvirt-qemu
 
 #Insert Line Beginning of File
 #sed '1 s/^/This will be the first line of the file\n/' myfile.txtapt
+
+-----------------------------------------------------------------------------------------------
+#Don't use those lines concerning firewall
+#### To fix firewald error you need to change firewalld backend to iptables instead of nftables
+
+#nano /etc/firewalld/firewalld.conf
+##then change:
+#FirewallBackend=nftables to FirewallBackend=iptables
+
+##Restart firewalld
+#sudo systemctl restart firewalld.service
+-----------------------------------------------------------------------------------------------
 
 
 
