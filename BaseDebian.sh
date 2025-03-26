@@ -33,6 +33,8 @@ PKGS=(
 for PKG in "${PKGS[@]}"; do
     echo "INSTALLING: ${PKG}"
     sudo apt install -S "$PKG"
+done
+
     
     #Enable Network manager
     sudo systemctl enable NetworkManager
@@ -40,10 +42,6 @@ for PKG in "${PKGS[@]}"; do
     #Enable sddm so it get started on boot
     sudo systemctl enable sddm
     sudo systemctl start sddm
-
-
-    done
-
 
 echo
 echo "Done!"
