@@ -9,7 +9,6 @@
 #chmod +x BaseDebian.sh
 #sudo chmod +x BaseDebian,sh
 #./BaseDebian.sh
-#https://www.youtube.com/watch?v=G7vMhsTUzWI Edit - git status -git add . (. = all files changed or use name of file changed)
 
 echo
 echo "Base KDE Plasma installing"
