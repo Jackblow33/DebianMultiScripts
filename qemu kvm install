@@ -2,7 +2,7 @@
 # KVM - Qemu without gpu passtrough ##
 ######################################
 
-# https://github.com/daveprowse/virtualization/blob/main/kvm/kvm-install-debian-12/kvm-install-debian-12.md
+#Mostly based on: https://github.com/daveprowse/virtualization/blob/main/kvm/kvm-install-debian-12/kvm-install-debian-12.md
 
 ##Cpu core count
 egrep -c '(vmx|svm)' /proc/cpuinfo
