@@ -12,7 +12,7 @@ sudo sed -i 's|#AutoEnable=false|AutoEnable=true|g' /etc/bluetooth/main.conf
 #Wifi drivers for mac
 sudo apt install bcmwl-kernel-source
 
-#Bluetooth
+#Bluetooth - need testing
 #sudo apt install bluedevil bluetooth
 sudo apt install bluetooth pulseaudio-module-bluetooth; sudo killall pulseaudio
 
