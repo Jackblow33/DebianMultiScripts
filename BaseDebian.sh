@@ -7,7 +7,7 @@
 #git clone https://github.com/Jackblow33/DebianMultiScripts.git
 #cd DebianMultiScripts
 #chmod +x BaseDebian.sh
-#sudo chmod +x DebianMultiScripts
+#sudo chmod +x BaseDebian,sh
 #./BaseDebian.sh
 #https://www.youtube.com/watch?v=G7vMhsTUzWI Edit - git status -git add . (. = all files changed or use name of file changed)
 
