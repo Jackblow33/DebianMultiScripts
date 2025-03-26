@@ -1,0 +1,249 @@
+
+#Insert Line Beginning of File
+#sed '1 s/^/This will be the first line of the file\n/' myfile.txtapt
+
+######################################
+# KVM - Qemu without gpu passtrough ##
+######################################
+
+# https://github.com/daveprowse/virtualization/blob/main/kvm/kvm-install-debian-12/kvm-install-debian-12.md
+
+sudo su
+# Cpu core count
+egrep -c '(vmx|svm)' /proc/cpuinfo
+#Check if virtualisation is enable in bios
+lscpu | grep Virtualization
+apt update && apt upgrade -y
+apt install qemu-kvm qemu-utils libvirt-daemon-system libvirt-clients virtinst virt-manager
+
+
+# Enable it and start it:
+systemctl --now enable libvirtd
+
+#Check the service:
+systemctl status libvirtd
+
+#Check QEMU and Virsh versions:
+kvm --version
+
+#Check that the KVM modules are loaded correctly.
+lsmod | grep kvm
+
+#Sample results:
+#dpro@smauggy:~$ lsmod | grep kvm
+#kvm_intel             380928  0
+#kvm                  1142784  1 kvm_intel
+
+
+# Run the following command to view the various components that should run in KVM:
+sudo virt-host-validate
+
+
+# Add a user to the libvirt group so that it can create and modify virtual machines.
+##### sudo usermod -aG libvirt <username>
+sudo usermod -aG libvirt $USER
+sudo usermod -aG libvirt-qemu $USER
+sudo usermod -aG kvm $USER
+sudo usermod -aG input $USER
+sudo usermod -aG disk $USER
+
+
+#### To fix firewald error you need to change firewalld backend to iptables instead of nftables
+
+#nano /etc/firewalld/firewalld.conf
+##then change:
+#FirewallBackend=nftables to FirewallBackend=iptables
+
+##Restart firewalld
+#sudo systemctl restart firewalld.service
+
+
+##And, set it to autostart whenever the system is rebooted.
+sudo virsh net-autostart default
+
+#Type the following command:
+sudo virsh net-list
+
+#Now apply the changes. These can be applied by restarting the libvirtd service or by restarting the computer.
+systemctl restart libvirtd
+
+#Now, let's view our KVM networks again:
+sudo virsh net-list
+reboot
+############# Congrats ur done! Can now start: virt-manager #################
+
+# Enable C/P from host to vm (is it really needed now???) Not necessary in Ubuntu
+#https://medium.com/@max.kombarov/install-the-spice-guest-agent-tools-on-a-debian-based-system-in-vm-2bc66fc2d95b
+####### install on x11 virtualize system only
+apt update
+apt install spice-vdagent
+#Start the SPICE Agent Service
+systemctl start spice-vdagent
+#Start automatically at boot
+###???sudo systemctl enable spice-vdagent
+#Check the SPICE Agent Status
+systemctl status spice-vdagentsudo
+#OLD_sudo nano /usr/lib/systemd/user/plasma-core.target
+#Add: spice-vdagent.service at the end of line: Wants=
+
+
+###########
+# Yuzu  ###
+###########
+#https://github.com/edisionnano/Yuzu-Linux-Guide/blob/master/README.md
+#https://yuzu-emulator.net/wiki/building-for-linux/
+
+#Use script installYuzu.sh.
+#Place it inside an empty folder. (This is where Yuzu will be installed)
+#Execute instalYuzu.sh as root. "sudo sh ./installYuzu.sh"
+#Wait for the installer to finish. (It may take up to 10 minutes)
+#Execute "./yuzu-canary/build/bin/yuzu" to launch Yuzu.
+
+#Make the Script Executable: sudo chmod +x ./installYuzu.sh
+
+
+# Script = installYuzu.sh
+
+sudo apt-get install git cmake make
+echo Installing latest YUZU canary build...
+
+#delete files and directories
+rm -rf yuzu-canary
+
+#Last version from march 3rd 2024 - unofficial git
+git clone --recursive https://github.com/cobaltgit/yuzu.git
+
+cd yuzu-canary
+
+
+mkdir build && cd build
+cmake .. -DCMAKE_BUILD_TYPE=Release
+make
+make install
+
+echo Install Complete!
+
+echo Executable: ./yuzu-canary/build/bin/yuzu
+
+#Updating Yuzu
+#To update Yuzu run: "sudo sh ./installYuzu.sh" again. This will automatically uninstall and reinstall the latest version of Yuzu. Note: User specific data (game saves, setting, controller profiles) will NOT be lost when Yuzu is updated.
+
+
+
+
+########################################################
+# commands to try for enabling gpu passtrough Debian12 #
+########################################################
+# https://www.server-world.info/en/note?os=Debian_12&p=kvm&f=13
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# - Doesn't have worked with Haswell system ##########################################################
+
+##############################################################
+#          KVM PCI passtrough (old)
+#   https://www.youtube.com/watch?v=3yhwJxWSqXI
+# new : https://www.youtube.com/watch?v=2aHQbg9j_gI
+##############################################################
+#edit grub (new)
+#C/P from next outputs pci ids for audio video of dGpu (Amd rx570 = 1002:67df,1002:aaf0 )
+lspci -nn | grep -iP "VGA|audio"
+nano /etc/default/grub
+#add: GRUB_CMDLINE_LINUX_DEFAULT= "intel_iommu=on iommu=pt vfio-pci.ids=1002:67df,1002:aaf0"
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+#Reboot???
+#dmesg | grep IOMMU #Useless
+sudo nano /etc/modprobe.d/vfio_pci.conf
+#Add the following
+options vfio_pci ids=1002:67df,1002:aaf0
+#Then update initamfs
+update-initramfs -c -k $(uname -r)
+#??? sudo reboot now
+lspci -k grep -E "vfio-pci|AMD"
+
+
+
+
+
+
+
+
+
+#(Old Debian)
+####################
+#edit grub
+####################
+#Might be easier
+nano /etc/default/grub
+#add: GRUB_CMDLINE_LINUX_DEFAULT= "iommu=pt intel_iommu=on"
+sudo update-grub
+dmesg | grep IOMMU
+lspci -nn | grep -iP "VGA|audio"
+#Setup VFIO with Device numbers/id from above VIDEO AND AUDIO!
+sudo nano /etc/initramfs-tools/modules
+#Add the following(ids are for rx570):
+
+softdep amdgpu pre: vfio vfio_pci
+
+vfio
+vfio_iommu_type1
+vfio_virqfd
+options vfio_pci ids=1002:67df,1002:aaf0
+vfio_pci ids=1002:67df,1002:aaf0
+vfio_pci
+amdgpu
+
+
+sudo nano /etc/modules
+#Add the following:
+vfio
+vfio_iommu_type1
+vfio_pci ids=1002:67df,1002:aaf0
+
+
+sudo nano /etc/modprobe.d/amdgpu.conf
+#Add the following
+softdep amdgpu pre: vfio vfio_pci
+
+sudo nano /etc/modprobe.d/vfio.conf
+#Add the following
+options vfio_pci ids=1002:67df,1002:aaf0
+
+######### REBOOT
+
+lspci -vnn | grep -iP "vga|amdgpu|nvidia|nouveau|vfio-pci"
+
+#Avoid BSODs on New Windows 10 Installs
+sudo nano /etc/modprobe.d/kvm.conf
+#Add the following:
+options kvm ignore_msrs=1
+options kvm report_ignored_msrs=0
+
+#Fix Apparmor restrictions
+sudo nano /etc/apparmor.d/abstractions/libvirt-qemu
+#-Modify like this for usb access
+/dev/bus/usb/** rw,
+/etc/udev/udev.conf r,
+/sys/bus/ r,
+/sys/class/ r,
+/run/udev/data/* rw,
+
+#Part 2 Setting up Virtmanager: https://www.youtube.com/watch?v=GbhUBQdMoJg
+
+
+
+
+
+
+
