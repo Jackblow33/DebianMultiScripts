@@ -7,7 +7,7 @@
 #git clone https://github.com/Jackblow33/DebianMultiScripts.git
 #cd DebianMultiScripts
 #chmod +x BaseDebian.sh
-#sudo chmod +x BaseDebian,sh
+#sudo chmod u+x BaseDebian,sh
 #./BaseDebian.sh
 
 echo
