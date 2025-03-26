@@ -4,6 +4,7 @@
 #https://cdimage.debian.org/cdimage/weekly-builds/amd64/iso-cd/debian-testing-amd64-netinst.iso
 
 #echo $PATH
+#apt install git
 #cd /usr/local/bin
 #git clone https://github.com/Jackblow33/DebianMultiScripts.git
 #cd DebianMultiScripts
