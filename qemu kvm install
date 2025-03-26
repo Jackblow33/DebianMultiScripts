@@ -4,7 +4,6 @@
 
 # https://github.com/daveprowse/virtualization/blob/main/kvm/kvm-install-debian-12/kvm-install-debian-12.md
 
-sudo su
 ##Cpu core count
 #egrep -c '(vmx|svm)' /proc/cpuinfo
 ##Check if virtualisation is enable in bios  #Intel Cpu should read: Virtualization: VT-x
@@ -16,8 +15,9 @@ apt install qemu-kvm qemu-utils libvirt-daemon-system libvirt-clients virtinst v
 #Enable it and start it:
 systemctl --now enable libvirtd
 
-##Check the service:
-#systemctl status libvirtd
+##Check the service status:
+systemctl status libvirtd
+# Ctrl+c to exit
 
 #Check QEMU and Virsh versions:
 #kvm --version
