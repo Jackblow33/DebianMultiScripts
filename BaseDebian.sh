@@ -1,23 +1,50 @@
 #!/bin/bash
-#
-#
-#Option 2 x11&Wayland (HDD_3.63GB Ram_1.05GB 1313_PKG)
-#
-sudo apt install kde-plasma-desktop firefox-esr plasma-discover plasma-pa plasma-nm kmenuedit fastfetch
-#bluetooth  bluedevil
-#Enable Network manager
-sudo systemctl enable NetworkManager
-sudo systemctl start NetworkManager
-#Enable sddm so it get started on boot
-sudo systemctl enable sddm
-sudo systemctl start sddm
-#
-#
-#To access a USB device within a KVM virtual machine
-# 1st Click VirtualMachine/Redirect USB device
-#
-#  lsusb
-#Identify the device: Look for the specific USB device you want topass to the VM. Note the bus and device numbers (e.g., Bus 002 Device 002).
-#
-#  -device usb-host,hostbus=<002>,hostaddr=<002>
-#      qemu-system-x86_64 -m 2G -smp 2 -cdrom /path/to/iso.iso -device usb-host,hostbus=2,hostaddr=3 ...
+
+#Link Debian-testing weekly build iso amd64
+#https://cdimage.debian.org/cdimage/weekly-builds/amd64/iso-cd/debian-testing-amd64-netinst.iso
+
+#cd /usr/local/bin
+#git clone https://github.com/Jackblow33/DebianMultiScripts.git
+#cd DebianMultiScripts
+#chmod +x BaseDebian.sh
+#sudo chmod +x DebianMultiScripts
+#./BaseDebian.sh
+#https://www.youtube.com/watch?v=G7vMhsTUzWI Edit - git status -git add . (. = all files changed or use name of file changed)
+
+echo
+echo "Base KDE Plasma installing"
+echo
+
+PKGS=(
+        'kde-plasma-desktop'
+        'plasma-discover'
+        'plasma-pa'
+        'plasma-nm'
+        'kmenuedit'
+        'firefox-esr'
+        'fastfetch'
+
+# Soon Bluetooth PKGS
+#bluedevil
+#bluetooth
+
+
+        )
+
+for PKG in "${PKGS[@]}"; do
+    echo "INSTALLING: ${PKG}"
+    sudo apt install -S "$PKG"
+    #Enable Network manager
+    sudo systemctl enable NetworkManager
+    sudo systemctl start NetworkManager
+    #Enable sddm so it get started on boot
+    sudo systemctl enable sddm
+    sudo systemctl start sddm
+
+
+    done
+
+
+echo
+echo "Done!"
+echo
