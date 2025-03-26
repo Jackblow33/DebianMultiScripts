@@ -60,8 +60,8 @@ reboot
 
 # Enable C/P from host to vm (is it really needed now???) Not necessary in Ubuntu
 #https://medium.com/@max.kombarov/install-the-spice-guest-agent-tools-on-a-debian-based-system-in-vm-2bc66fc2d95b
-####### install on x11 virtualize system only
-#apt update
+####### install on x11 virtualize system only...???
+#apt update && apt upgrade -y
 #apt install spice-vdagent
 ##Start the SPICE Agent Service
 #systemctl start spice-vdagent
