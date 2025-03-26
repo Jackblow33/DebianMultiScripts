@@ -32,7 +32,7 @@ done
 echo
 echo "Done!"
 echo
-
+--------------------------------------------------------------------
     #Enable Network manager
     #sudo systemctl enable NetworkManager
     #sudo systemctl start NetworkManager
@@ -40,6 +40,6 @@ echo
     #sudo systemctl enable sddm
     #sudo systemctl start sddm
 
-    # Soon Bluetooth PKGS
-#bluedevil
-#bluetooth
+    # Coming soon Bluetooth PKGS
+    #bluedevil
+    #bluetooth
