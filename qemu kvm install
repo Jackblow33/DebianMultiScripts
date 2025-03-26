@@ -9,25 +9,25 @@
 # https://github.com/daveprowse/virtualization/blob/main/kvm/kvm-install-debian-12/kvm-install-debian-12.md
 
 sudo su
-# Cpu core count
-egrep -c '(vmx|svm)' /proc/cpuinfo
-#Check if virtualisation is enable in bios
-lscpu | grep Virtualization
+##Cpu core count
+#egrep -c '(vmx|svm)' /proc/cpuinfo
+##Check if virtualisation is enable in bios
+#lscpu | grep Virtualization
 apt update && apt upgrade -y
 apt install qemu-kvm qemu-utils libvirt-daemon-system libvirt-clients virtinst virt-manager
 
 
-# Enable it and start it:
+#Enable it and start it:
 systemctl --now enable libvirtd
 
-#Check the service:
-systemctl status libvirtd
+##Check the service:
+#systemctl status libvirtd
 
 #Check QEMU and Virsh versions:
-kvm --version
+#kvm --version
 
-#Check that the KVM modules are loaded correctly.
-lsmod | grep kvm
+##Check that the KVM modules are loaded correctly.
+#lsmod | grep kvm
 
 #Sample results:
 #dpro@smauggy:~$ lsmod | grep kvm
@@ -35,8 +35,8 @@ lsmod | grep kvm
 #kvm                  1142784  1 kvm_intel
 
 
-# Run the following command to view the various components that should run in KVM:
-sudo virt-host-validate
+##Run the following command to view the various components that should run in KVM:
+#sudo virt-host-validate
 
 
 # Add a user to the libvirt group so that it can create and modify virtual machines.
@@ -62,27 +62,27 @@ sudo usermod -aG disk $USER
 sudo virsh net-autostart default
 
 #Type the following command:
-sudo virsh net-list
+#sudo virsh net-list
 
 #Now apply the changes. These can be applied by restarting the libvirtd service or by restarting the computer.
 systemctl restart libvirtd
 
-#Now, let's view our KVM networks again:
-sudo virsh net-list
+##Now, let's view our KVM networks again:
+#sudo virsh net-list
 reboot
 ############# Congrats ur done! Can now start: virt-manager #################
 
 # Enable C/P from host to vm (is it really needed now???) Not necessary in Ubuntu
 #https://medium.com/@max.kombarov/install-the-spice-guest-agent-tools-on-a-debian-based-system-in-vm-2bc66fc2d95b
 ####### install on x11 virtualize system only
-apt update
-apt install spice-vdagent
-#Start the SPICE Agent Service
-systemctl start spice-vdagent
-#Start automatically at boot
+#apt update
+#apt install spice-vdagent
+##Start the SPICE Agent Service
+#systemctl start spice-vdagent
+##Start automatically at boot
 ###???sudo systemctl enable spice-vdagent
-#Check the SPICE Agent Status
-systemctl status spice-vdagentsudo
+##Check the SPICE Agent Status
+#systemctl status spice-vdagentsudo
 #OLD_sudo nano /usr/lib/systemd/user/plasma-core.target
 #Add: spice-vdagent.service at the end of line: Wants=
 
