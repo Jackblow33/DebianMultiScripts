@@ -20,7 +20,7 @@ systemctl status libvirtd
 # Ctrl+c to exit
 
 #Check QEMU and Virsh versions:
-#kvm --version
+kvm --version
 
 ##Check that the KVM modules are loaded correctly.
 #lsmod | grep kvm
