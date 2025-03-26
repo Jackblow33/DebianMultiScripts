@@ -11,7 +11,7 @@
 #./BaseDebian.sh
 
 echo
-echo "Base KDE Plasma installing"
+echo "Base KDE Plasma instalation"
 echo
 
 PKGS=(
