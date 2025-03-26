@@ -33,11 +33,13 @@ for PKG in "${PKGS[@]}"; do
     echo "INSTALLING: ${PKG}"
     sudo apt install "$PKG"
 done
-
+sudo apt autoremove zutty kwalletmanager kdeconnect
 echo
 echo "Done!"
 echo
 --------------------------------------------------------------------
+    
+   
     #Enable Network manager
     #sudo systemctl enable NetworkManager
     #sudo systemctl start NetworkManager
