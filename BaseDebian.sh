@@ -36,7 +36,7 @@ for PKG in "${PKGS[@]}"; do
     sudo apt install "$PKG" -y
     
     #Removing some packages
-    sudo apt purge zutty kwalletmanager kdeconnect   #Debian
+    sudo apt purge zutty kwalletmanager kdeconnect -y  #Debian
 done
 
 #add check for install successful
