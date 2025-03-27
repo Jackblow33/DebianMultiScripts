@@ -1,3 +1,5 @@
+#!/bin/bash
+
 ######################################
 # KVM - Qemu without gpu passtrough ##
 ######################################
@@ -8,6 +10,7 @@
 egrep -c '(vmx|svm)' /proc/cpuinfo
 ##Check if virtualisation is enable in bios  #Intel Cpu should read: Virtualization: VT-x
 lscpu | grep Virtualization
+read -p "Press enter to start"
 apt update && apt upgrade -y
 apt install qemu-kvm qemu-utils libvirt-daemon-system libvirt-clients virtinst virt-manager
 
