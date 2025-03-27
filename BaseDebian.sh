@@ -25,7 +25,8 @@ PKGS=(
 )
 
 
-sudo apt update && apt upgrade
+sudo apt update && apt upgrade            #Debian           Both= sudo apt update && apt upgrade || sudo pacman -Sy && sudo pacman -Syu
+#sudo pacman -Sy && sudo pacman -Syu      #Arch linux
 echo
 echo "Base KDE Plasma instalation"
 echo
