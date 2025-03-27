@@ -10,7 +10,7 @@
 #apt install git
 #cd /usr/local/bin
 #git clone https://github.com/Jackblow33/DebianMultiScripts.git
-#mv /DebianMultiScripts/BaseDebian.sh /usr/local/bin
+#mv DebianMultiScripts/BaseDebian.sh /usr/local/bin
 #chmod +x BaseDebian.sh
 #./BaseDebian.sh
 
