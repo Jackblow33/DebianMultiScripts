@@ -33,14 +33,15 @@ for PKG in "${PKGS[@]}"; do
     echo "INSTALLING: ${PKG}"
     sudo apt install "$PKG"
 
-    #Remove packages that I don't want
+    echo "Removing some packages"
     sudo apt autoremove zutty kwalletmanager kdeconnect   
 done
 
+#add check for install successful
 echo
 echo "Congratulation!"
 echo
-#add check for successfull install
+
 read -p "Press enter to reboot............................"
 reboot
 --------------------------------------------------------------------
