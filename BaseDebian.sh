@@ -7,7 +7,7 @@
 #https://cdimage.debian.org/cdimage/weekly-builds/amd64/iso-cd/debian-testing-amd64-netinst.iso
 
 #echo $PATH
-#PATH=/home/$USER/github             #$USER = substitute by wathever your name
+#PATH=/home/$USER/github             #$USER = substitute by wathever your name is
 #apt install git
 #mkdir /home/$USER/github
 #chmod +rw /home/$USER/github
