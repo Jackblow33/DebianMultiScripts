@@ -67,4 +67,5 @@ reboot
 #6-add error checking, press enter, reboot
 #7-unpin konquerer from task bar | pin firefox Konsole   #https://github.com/shalva97/kde-configuration-files
 #9-remove konsole exit confirmation
+#10-set google as default home page in firefox
 #100-install without emoji, konquerer, kedit - for now hidden from menu but still present...
