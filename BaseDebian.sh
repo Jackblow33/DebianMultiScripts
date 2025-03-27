@@ -7,11 +7,12 @@
 #https://cdimage.debian.org/cdimage/weekly-builds/amd64/iso-cd/debian-testing-amd64-netinst.iso
 
 #echo $PATH
+#PATH=/home/$USER/github             #$USER = wathever your name
 #apt install git
-#mkdir /home/github
-chmod +rw /home/github
-#git -C /home/github clone https://github.com/Jackblow33/DebianMultiScripts.git
-#cd /home/github/DebianMultiScripts
+#mkdir /home/$USER/github
+#chmod +rw /home/$USER/github
+#git -C /home/$USER/github clone https://github.com/Jackblow33/DebianMultiScripts.git
+#cd /home/$USER/github/DebianMultiScripts
 #chmod +x BaseDebian.sh
 #./BaseDebian.sh
 
