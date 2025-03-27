@@ -44,19 +44,11 @@ echo
 echo "Congratulation!"
 echo
 
-read -p "Press enter to reboot............................"
+read -p "Press enter to reboot............................>>>"
 reboot
---------------------------------------------------------------------
+
     
    
-    #Enable Network manager
-    #sudo systemctl enable NetworkManager
-    #sudo systemctl start NetworkManager
-    #Enable sddm so it get started on boot
-    #sudo systemctl enable sddm
-    #sudo systemctl start sddm
-
-
 ### TODO ###
 #1-Add Bluetooth applet - find related pkg
     #bluetooth bluez-meshd bluez-cups     # bluedevil 
@@ -69,3 +61,11 @@ reboot
 #9-remove konsole exit confirmation
 #10-set google as default home page in firefox
 #100-install without emoji, konquerer, kedit - for now hidden from menu but still present...
+
+#Delete
+    #Enable Network manager
+    #sudo systemctl enable NetworkManager
+    #sudo systemctl start NetworkManager
+    #Enable sddm so it get started on boot
+    #sudo systemctl enable sddm
+    #sudo systemctl start sddm
