@@ -61,7 +61,7 @@ reboot
 #1-Add Bluetooth applet - find related pkg
     #bluetooth bluez-meshd bluez-cups     # bluedevil 
 #2-Cleanup menu and add menu editor config file + remove kmenuedit from install script
-#3-option to remove or not screen brightness applet | laptop vs desktop with hostnamectl
+#3-option to remove or not screen brightnest applet | laptop vs desktop with command hostnamectl
 #4-deactivate top left screen edge /overview set to no action  #https://github.com/shalva97/kde-configuration-files?tab=readme-ov-file#screen-edges
 #5-add commands from postinstall document
 #6-add error checking, press enter, reboot
