@@ -1,10 +1,5 @@
 #!/bin/bash
 
-##########   Working to install packages
-# March 27 2025 - Select Debian with no dektop environnement ex. no KDE, gnome, etc...
-
-#Link Debian-testing weekly build iso amd64
-#https://cdimage.debian.org/cdimage/weekly-builds/amd64/iso-cd/debian-testing-amd64-netinst.iso
 
 #echo $PATH
 #PATH=/home/$USER/github             #$USER = substitute by wathever your name is
@@ -15,6 +10,7 @@
 #cd /home/$USER/github/DebianMultiScripts
 #chmod +x BaseDebian.sh
 #./BaseDebian.sh
+
 
 echo
 echo "Base KDE Plasma instalation"
