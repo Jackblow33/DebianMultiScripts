@@ -40,6 +40,9 @@ done
 echo
 echo "Congratulation!"
 echo
+#add check for successfull install
+read -p "Press enter to reboot............................"
+reboot
 --------------------------------------------------------------------
     
    
