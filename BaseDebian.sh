@@ -11,7 +11,7 @@
 #chmod +x BaseDebian.sh
 #./BaseDebian.sh
 
-
+apt update && apt upgrade
 echo
 echo "Base KDE Plasma instalation"
 echo
