@@ -15,13 +15,13 @@
 # CMD_1='sudo apt install' #Debian -y
 # CMD_2='sudo pacman -S'   #Arch   --noconfirm --needed
 PKGS=(
-        'kde-plasma-desktop'
-        'plasma-discover'
-        'plasma-pa'
-        'plasma-nm'
-        'kmenuedit'
-        'firefox-esr'
-        'fastfetch'
+        'kde-plasma-desktop'    # KDE Plasma Desktop
+        'plasma-discover'       # Graphical software manager
+        'plasma-pa'             # Applet for audio volume
+        'plasma-nm'             # Applet network manager
+        'kmenuedit'             # Menu editor
+        'firefox-esr'           # Web browser
+        'fastfetch'             # Fetching system information in terminal
 )
 
 
