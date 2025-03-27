@@ -11,12 +11,9 @@
 #chmod +x BaseDebian.sh
 #./BaseDebian.sh
 
-apt update && apt upgrade
-echo
-echo "Base KDE Plasma instalation"
-echo
-# CMD='sudo apt install' #Debian -y
-# CMD='sudo pacman -S'   #Arch   --noconfirm --needed
+
+# CMD_1='sudo apt install' #Debian -y
+# CMD_2='sudo pacman -S'   #Arch   --noconfirm --needed
 PKGS=(
         'kde-plasma-desktop'
         'plasma-discover'
@@ -26,6 +23,12 @@ PKGS=(
         'firefox-esr'
         'fastfetch'
 )
+
+
+sudo apt update && apt upgrade
+echo
+echo "Base KDE Plasma instalation"
+echo
 
 for PKG in "${PKGS[@]}"; do
     echo "INSTALLING: ${PKG}"
