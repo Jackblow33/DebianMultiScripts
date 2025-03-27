@@ -32,10 +32,9 @@ PKGS=(
 
 for PKG in "${PKGS[@]}"; do
     echo "INSTALLING: ${PKG}"
-    sudo apt install "$PKG"
-    echo    
-    echo "Removing some packages"
-    echo
+    sudo apt install "$PKG" -y
+    
+    #Removing some packages
     sudo apt purge zutty kwalletmanager kdeconnect   #Debian
 done
 
