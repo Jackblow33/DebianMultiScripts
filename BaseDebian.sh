@@ -50,6 +50,13 @@ echo
     #sudo systemctl enable sddm
     #sudo systemctl start sddm
 
-    # Coming soon Bluetooth PKGS
+
+### TODO ###
+#1-Add Bluetooth applet - find related pkg
     #bluedevil
     #bluetooth
+#2-Cleanup menu and add menu editor config file + remove kmenuedit from install script
+#3-option to remove or not screen brightness applet
+#4-deactivate top left screen edge /overview set to none
+#5-add commands from postinstall document
+#6-add error checking, press enter, reboot
