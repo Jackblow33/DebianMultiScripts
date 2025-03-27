@@ -4,5 +4,5 @@ ISO: https://cdimage.debian.org/cdimage/weekly-builds/amd64/iso-cd/debian-testin
 
 ![Screenshot_20250326_211755](https://github.com/user-attachments/assets/1fd8db37-0854-46cd-8222-2959b45fbf86)
 
-Basic custom installation shell scripts collection for Debian Bookworm and “trixie” Releases.
+Basic custom installation Shell scripts collection for Debian Bookworm and “trixie” Releases.
 
