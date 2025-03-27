@@ -63,7 +63,7 @@ reboot
     #bluetooth
 #2-Cleanup menu and add menu editor config file + remove kmenuedit from install script
 #3-option to remove or not screen brightness applet | laptop vs desktop
-#4-deactivate top left screen edge /overview set to no action
+#4-deactivate top left screen edge /overview set to no action  #https://github.com/shalva97/kde-configuration-files?tab=readme-ov-file#screen-edges
 #5-add commands from postinstall document
 #6-add error checking, press enter, reboot
 #7-unpin konquerer from task bar | pin firefox Konsole   #https://github.com/shalva97/kde-configuration-files
