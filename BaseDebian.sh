@@ -66,4 +66,5 @@ reboot
 #4-deactivate top left screen edge /overview set to no action
 #5-add commands from postinstall document
 #6-add error checking, press enter, reboot
+#7-unpin konquerer from task bar
 #100-install without emoji, konquerer, kedit - for now hidden from menu but still present...
