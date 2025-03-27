@@ -56,7 +56,7 @@ echo
     #bluedevil
     #bluetooth
 #2-Cleanup menu and add menu editor config file + remove kmenuedit from install script
-#3-option to remove or not screen brightness applet
+#3-option to remove or not screen brightness applet | laptop vs desktop
 #4-deactivate top left screen edge /overview set to no action
 #5-add commands from postinstall document
 #6-add error checking, press enter, reboot
