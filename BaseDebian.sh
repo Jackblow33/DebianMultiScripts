@@ -2,7 +2,7 @@
 
 
 #echo $PATH
-#PATH=/home/$USER/github             #$USER = substitute by wathever your name is
+#PATH=/home/$USER/github             #$USER = substitute with your user name.
 #apt install git
 #mkdir /home/$USER/github
 #chmod +rw /home/$USER/github
