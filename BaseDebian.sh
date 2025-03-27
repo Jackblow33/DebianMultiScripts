@@ -8,9 +8,10 @@
 
 #echo $PATH
 #apt install git
-#cd /usr/local/bin
-#git clone https://github.com/Jackblow33/DebianMultiScripts.git
-#mv DebianMultiScripts/BaseDebian.sh /usr/local/bin
+#mkdir /home/github
+chmod +rw /home/github
+#git -C /home/github clone https://github.com/Jackblow33/DebianMultiScripts.git
+#cd /home/github/DebianMultiScripts
 #chmod +x BaseDebian.sh
 #./BaseDebian.sh
 
