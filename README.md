@@ -1,4 +1,4 @@
-# DebianMultiScripts Trixie Alpha KDE_debloated Edition
+# DebianMultiScripts Trixie Alpha KDE_debloat
 
 ISO: https://cdimage.debian.org/cdimage/weekly-builds/amd64/iso-cd/debian-testing-amd64-netinst.iso
 
