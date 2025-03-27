@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ##########   Working to install packages
-# March 26 2025 - Select Debian with no dektop environnement ex. no KDE, gnome, etc...
+# March 27 2025 - Select Debian with no dektop environnement ex. no KDE, gnome, etc...
 
 #Link Debian-testing weekly build iso amd64
 #https://cdimage.debian.org/cdimage/weekly-builds/amd64/iso-cd/debian-testing-amd64-netinst.iso
