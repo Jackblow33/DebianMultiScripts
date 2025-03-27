@@ -31,7 +31,7 @@ PKGS=(
 
 for PKG in "${PKGS[@]}"; do
     echo "INSTALLING: ${PKG}"
-    sudo apt install "$PKG" -y
+    sudo apt install "$PKG"
 done
 sudo apt autoremove zutty kwalletmanager kdeconnect   #Remove packages that I don't want
 echo
