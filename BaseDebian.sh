@@ -1,16 +1,17 @@
 #!/bin/bash
 
 
-#echo $PATH
 #PATH=/home/$USER/github
+
 #sudo apt install git
-#mkdir /home/$USER/github
-#chmod 700 /home/$USER/github
-#cd /home/$USER/github
-#git clone https://github.com/Jackblow33/DebianMultiScripts.git
+#sudo mkdir $PATH
+#chmod 700 $PATH
+#cd $PATH
+#sudo git clone https://github.com/Jackblow33/DebianMultiScripts.git
 #cd DebianMultiScripts
-##### chmod +x BaseDebian.sh
+#chmod +x BaseDebian.sh
 #./BaseDebian.sh
+
 
 
 PKGS=(
