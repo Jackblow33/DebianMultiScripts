@@ -83,6 +83,7 @@ timer_stop
 ### TODO ###
 # plasma-nm setup
 # Cleanup menu and add menu editor config file + remove kmenuedit from install script + up config file to github
+# System monitor missing sensors
 # Automated option to remove or not screen brightnest applet | laptop vs desktop with command hostnamectl
 # deactivate top left screen edge /overview set to no action  #https://github.com/shalva97/kde-configuration-files?tab=readme-ov-file#screen-edges
 # add commands from postinstall document
