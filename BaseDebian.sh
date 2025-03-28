@@ -5,7 +5,7 @@
 #PATH=/home/$USER/github             #$USER = substitute with your user name.
 #apt install git
 #mkdir /home/$USER/github
-#chmod +rw /home/$USER/github
+#chmod 700 /home/$USER/github
 #git -C /home/$USER/github clone https://github.com/Jackblow33/DebianMultiScripts.git
 #cd /home/$USER/github/DebianMultiScripts
 #chmod +x BaseDebian.sh
