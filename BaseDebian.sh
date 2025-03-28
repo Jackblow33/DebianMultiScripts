@@ -13,12 +13,11 @@
 #./BaseDebian.sh
 
 
-
+#        'plasma-nm'             # Applet network manager
 PKGS=(
         'kde-plasma-desktop'    # KDE Plasma Desktop
         'plasma-discover'       # Graphical software manager
         'plasma-pa'             # Applet for audio volume
-#        'plasma-nm'             # Applet network manager
         'kmenuedit'             # Menu editor
         'firefox-esr'           # Web browser
         'fastfetch'             # Fetching system information in terminal
@@ -49,7 +48,7 @@ sudo apt update && apt upgrade      #|| sudo pacman -Sy && sudo pacman -Syu
 echo
 echo "Base KDE Plasma instalation"
 echo
-
+read -p "Press Enter to start KDE installation............................>>>"
 for PKG in "${PKGS[@]}"; do
     echo "INSTALLING: ${PKG}"
     sudo apt install "$PKG" -y #|| sudo pacman -S "$PKG" --noconfirm --needed
@@ -63,7 +62,7 @@ echo
 echo "Congratulation!"
 echo
 timer_stop
-#read -p "Install completed! Press Enter to boot............................>>>"
+read -p "Install completed! Press Enter to boot............................>>>"
 
 #Enable Network manager
      sudo systemctl enable NetworkManager
