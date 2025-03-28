@@ -4,8 +4,34 @@
 # KVM - Qemu without gpu passtrough ##
 ######################################
 
+# Color variables
+red='\033[0;31m'
+green='\033[0;32m'
+yellow='\033[0;33m'
+blue='\033[0;34m'
+magenta='\033[0;35m'
+cyan='\033[0;36m'
+# Clear the color after that
+clear='\033[0m'
+
+
+# Examples https://stackoverflow.com/questions/24998434/read-command-display-the-prompt-in-color-or-enable-interpretation-of-backslas
+#echo -e "The color is: ${red}red${clear}!"
+#echo -e "The color is: ${green}green${clear}!"
+
+####################
+RESET="\033[0m"
+BOLD="\033[1m"
+YELLOW="\033[38;5;11m"
+#read -p "$(echo -e $BOLD$YELLOW"foo bar "$RESET)" 
+###########################################################################################################################
+
+
 #Mostly based on: https://github.com/daveprowse/virtualization/blob/main/kvm/kvm-install-debian-12/kvm-install-debian-12.md
 
+#################
+# START HERE ####
+#################
 ##Cpu core count
 egrep -c '(vmx|svm)' /proc/cpuinfo
 ##Check if virtualisation is enable in bios  #Intel Cpu should read: Virtualization: VT-x
@@ -16,15 +42,16 @@ apt update && apt upgrade -y
 apt install qemu-kvm qemu-utils libvirt-daemon-system libvirt-clients virtinst virt-manager
 
 
-#Enable it and start it:
+#Enable libvirtd
 systemctl --now enable libvirtd
 
 ##Check the service status:
 systemctl status libvirtd
 # Ctrl+c to exit
-
 #Check QEMU and Virsh versions:
 kvm --version
+read -p "Press enter, libvirtd should be enabled now"
+
 
 ##Check that the KVM modules are loaded correctly.
 lsmod | grep kvm
@@ -37,11 +64,11 @@ lsmod | grep kvm
 
 ##Run the following command to view the various components that should run in KVM:
 sudo virt-host-validate
-#It is normal to have freezer and devices failed + some warning. Qemu lines have to be green.
+#It is normal to have freezer FAIL and secure guest support WARN. Qemu related lines have to be green.
 
 
 # Add a user to the libvirt group so that it can create and modify virtual machines.
-##### sudo usermod -aG libvirt <username>
+##### sudo usermod -aG libvirt jack
 sudo usermod -aG libvirt $USER
 sudo usermod -aG libvirt-qemu $USER
 sudo usermod -aG kvm $USER
@@ -60,9 +87,23 @@ systemctl restart libvirtd
 ##Now, let's view our KVM networks again:
 #sudo virsh net-list
 reboot
-#END    ########## Congrats ur done! Can now start: virt-manager #################
+##################################################################################
+#  END    ########## Congrats ur done! Can now start: virt-manager ###############
+##################################################################################
 
-#Optional:
+
+
+
+
+
+
+
+
+
+
+#############
+#  Optional:#
+#############
 # Enable C/P from host to vm.  Not necessary in Ubuntu
 #https://medium.com/@max.kombarov/install-the-spice-guest-agent-tools-on-a-debian-based-system-in-vm-2bc66fc2d95b
 ####### install on x11 virtualize system only...???
