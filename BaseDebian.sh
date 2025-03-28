@@ -16,7 +16,7 @@ PKGS=(
         'kde-plasma-desktop'    # KDE Plasma Desktop
         'plasma-discover'       # Graphical software manager
         'plasma-pa'             # Applet for audio volume
-        'plasma-nm'             # Applet network manager
+#        'plasma-nm'             # Applet network manager
         'kmenuedit'             # Menu editor
         'firefox-esr'           # Web browser
         'fastfetch'             # Fetching system information in terminal
