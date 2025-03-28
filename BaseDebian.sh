@@ -62,6 +62,7 @@ echo
 echo "Congratulation!"
 echo
 timer_stop
+#error check
 read -p "Install completed! Press Enter to boot............................>>>"
 
 #Enable Network manager
