@@ -8,7 +8,7 @@
 #chmod 700 /home/$USER/github
 #git -C /home/$USER/github clone https://github.com/Jackblow33/DebianMultiScripts.git
 #cd /home/$USER/github/DebianMultiScripts
-#chmod +x BaseDebian.sh
+##### chmod +x BaseDebian.sh
 #./BaseDebian.sh
 
 
