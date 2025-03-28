@@ -2,7 +2,7 @@
 
 
 #echo $PATH
-#PATH=/home/$USER/github             #$USER = substitute with your user name.
+#PATH=/home/$USER/github             #$USER = substitute with your own user name.
 #apt install git
 #mkdir /home/$USER/github
 #chmod 700 /home/$USER/github
@@ -12,8 +12,6 @@
 #./BaseDebian.sh
 
 
-# CMD_1='sudo apt install' #Debian -y
-# CMD_2='sudo pacman -S'   #Arch   --noconfirm --needed
 PKGS=(
         'kde-plasma-desktop'    # KDE Plasma Desktop
         'plasma-discover'       # Graphical software manager
@@ -25,15 +23,34 @@ PKGS=(
 )
 
 
-sudo apt update && apt upgrade            #Debian           Both= sudo apt update && apt upgrade || sudo pacman -Sy && sudo pacman -Syu
-#sudo pacman -Sy && sudo pacman -Syu      #Arch linux
+timer_start()
+{
+BEGIN=$(date +%s)
+}
+
+
+
+timer_stop()
+{
+    NOW=$(date +%s)
+    let DIFF=$(($NOW - $BEGIN))
+    let MINS=$(($DIFF / 60))
+    let SECS=$(($DIFF % 60))
+    echo Time elapsed: $MINS:`printf %02d $SECS`
+}
+
+
+timer_start
+#Updating package if necessary
+sudo apt update && apt upgrade      #|| sudo pacman -Sy && sudo pacman -Syu
+
 echo
 echo "Base KDE Plasma instalation"
 echo
 
 for PKG in "${PKGS[@]}"; do
     echo "INSTALLING: ${PKG}"
-    sudo apt install "$PKG" -y
+    sudo apt install "$PKG" -y #|| sudo pacman -S "$PKG" --noconfirm --needed
     
     #Removing some packages
     sudo apt purge zutty kwalletmanager kdeconnect -y  #Debian
@@ -43,7 +60,7 @@ done
 echo
 echo "Congratulation!"
 echo
-
+timer_stop
 #read -p "Install completed! Press Enter to boot............................>>>"
 
 #Enable Network manager
