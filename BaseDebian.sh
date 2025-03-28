@@ -2,12 +2,13 @@
 
 
 #echo $PATH
-#PATH=/home/$USER/github             #$USER = substitute with your own user name.
-#apt install git
+#PATH=/home/$USER/github
+#sudo apt install git
 #mkdir /home/$USER/github
 #chmod 700 /home/$USER/github
-#git -C /home/$USER/github clone https://github.com/Jackblow33/DebianMultiScripts.git
-#cd /home/$USER/github/DebianMultiScripts
+#cd /home/$USER/github
+#git clone https://github.com/Jackblow33/DebianMultiScripts.git
+#cd DebianMultiScripts
 ##### chmod +x BaseDebian.sh
 #./BaseDebian.sh
 
