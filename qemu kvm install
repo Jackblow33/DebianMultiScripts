@@ -68,8 +68,7 @@ sudo virt-host-validate
 
 
 # Add a user to the libvirt group so that it can create and modify virtual machines.
-sudo usermod -aG libvirt jack
-#sudo usermod -aG libvirt $USER
+sudo usermod -aG libvirt $USER
 #sudo usermod -aG libvirt-qemu $USER
 #sudo usermod -aG kvm $USER
 #sudo usermod -aG input $USER
