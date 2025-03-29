@@ -16,13 +16,14 @@
 #./BaseDebian.sh         # Execute Script                              #
 ########################################################################
 
-# Color variables
+# Colors
 GREEN='\033[0;32m'
 NC='\033[0m' #no color
 
 TIMESTAMP=`date +%Y%m%d.%R`
 
-# Variables, Packages install
+#Variables
+# Packages install
 PKGS=(
         'kde-plasma-desktop'        # KDE Plasma Desktop
         'plasma-discover'           # Graphical software manager
@@ -35,7 +36,7 @@ PKGS=(
 #        'software-properties-qt'    # allows you to easily manage your distribution and independent software vendor software sources
 )
 
-
+#Fonctions
 timer_start()
 {
 BEGIN=$(date +%s)
@@ -70,6 +71,7 @@ done
 
     #Turn NumLock on - numlockx KDE
     #add do .BAK_timestamp of sddm.conf
+    
     sudo /bin/sh -c 'echo "Numlock=on" >> /etc/sddm.conf' #|| Arch
     
     #fastfetch auto load in terminal
