@@ -73,7 +73,7 @@ echo -e "${GREEN}Installation ran sucessfully!${NC}"
 echo
 timer_stop
 #error check
-read -p "Installation completed! Press Enter to boot............................>>>"
+read -p "$(echo -e $GREEN"Installation completed! Press Enter to reboot............................>>> "$NC)"
 
 #Enable Network manager
      sudo systemctl enable NetworkManager
