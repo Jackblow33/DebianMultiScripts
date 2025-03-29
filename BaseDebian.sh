@@ -4,7 +4,7 @@
 #PATH=/home/$USER/github                                               #
 #sudo su
 #apt update && apt upgrade                                        #
-#apt install git                                                  #
+#apt install git -y                                                 #
 #mkdir $PATH                                                      #
 #chmod 700 $PATH          # give user Read/Write/execute permissions   #
 #cd $PATH                                                              #
