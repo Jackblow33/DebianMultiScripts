@@ -21,6 +21,7 @@ PKGS=(
         'kmenuedit'             # Menu editor
         'firefox-esr'           # Web browser
         'fastfetch'             # Fetching system information in terminal
+        'numlockx'              # Turn NumLock on
 )
 
 
@@ -55,11 +56,14 @@ for PKG in "${PKGS[@]}"; do
     
     #Removing some packages
     sudo apt purge zutty kwalletmanager kdeconnect -y  #Debian
+
+    #Turn NumLock on
+    sudo sed -i 's|^exit 0.*$|# Numlock enable\n[ -x /usr/bin/numlockx ] \&\& numlockx on\n\nexit 0|' /etc/init.d/rc.local
 done
 
 #add check for install successful
 echo
-echo "Congratulation!"
+echo "Installation completed successfully"
 echo
 timer_stop
 #error check
