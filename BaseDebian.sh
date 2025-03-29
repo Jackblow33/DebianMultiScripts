@@ -2,12 +2,13 @@
 ########################################################################
 # ENTER THE FOLLOWING COMMANDS BEFORE LOADING THIS SCRIPT ##############
 #PATH=/home/$USER/github                                               #
-#sudo apt update && sudo apt upgrade                                        #
-#sudo apt install git                                                  #
+#sudo su
+#apt update && apt upgrade                                        #
+#apt install git                                                  #
 #mkdir $PATH                                                      #
 #chmod 700 $PATH          # give user Read/Write/execute permissions   #
 #cd $PATH                                                              #
-#sudo git clone https://github.com/Jackblow33/DebianMultiScripts.git   #
+#git clone https://github.com/Jackblow33/DebianMultiScripts.git   #
 #cd DebianMultiScripts                                                 #
 #chmod +x BaseDebian.sh  # permission setting executable               #
 #./BaseDebian.sh         # Execute Script                              #
