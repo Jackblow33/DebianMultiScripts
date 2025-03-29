@@ -35,6 +35,7 @@ PKGS=(
         'fastfetch'                 # Fetching system information in terminal
         'numlockx'                  # Turn NumLock on
         'gparted'                   # Partition utility
+        'ark unrar rar'             #ark manages various archive formats
 #        'kde-config-sddm'           # Login Screen (SDDM) System Settings Module
 #        'software-properties-qt'    # allows you to easily manage your distribution and independent software vendor software sources
 )
