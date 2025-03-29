@@ -1,7 +1,8 @@
 #!/bin/bash
 ########################################################################
 # ENTER THE FOLLOWING COMMANDS BEFORE LOADING THIS SCRIPT ##############
-#Run as user:
+########################################################################
+#Run as user:                                                          #
 #PATH=/home/$USER/github                                               #
 #sudo apt update && sudo apt upgrade                                   #
 #sudo apt install git -y                                               #
@@ -37,8 +38,6 @@ timer_start()
 {
 BEGIN=$(date +%s)
 }
-
-
 
 timer_stop()
 {
