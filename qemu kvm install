@@ -3,30 +3,6 @@
 ######################################
 # KVM - Qemu without gpu passtrough ##
 ######################################
-
-# Color variables
-red='\033[0;31m'
-green='\033[0;32m'
-yellow='\033[0;33m'
-blue='\033[0;34m'
-magenta='\033[0;35m'
-cyan='\033[0;36m'
-# Clear the color after that
-clear='\033[0m'
-
-
-# Examples https://stackoverflow.com/questions/24998434/read-command-display-the-prompt-in-color-or-enable-interpretation-of-backslas
-#echo -e "The color is: ${red}red${clear}!"
-#echo -e "The color is: ${green}green${clear}!"
-
-####################
-RESET="\033[0m"
-BOLD="\033[1m"
-YELLOW="\033[38;5;11m"
-#read -p "$(echo -e $BOLD$YELLOW"foo bar "$RESET)" 
-###########################################################################################################################
-
-
 #Mostly based on: https://github.com/daveprowse/virtualization/blob/main/kvm/kvm-install-debian-12/kvm-install-debian-12.md
 
 #################
@@ -87,25 +63,18 @@ systemctl restart libvirtd
 #sudo virsh net-list
 reboot
 ##################################################################################
-#  END    ########## Congrats ur done! Can now start: virt-manager ###############
+#  END HERE.  ########## Congrats ur done! Can now start: virt-manager ###############
 ##################################################################################
-
-
-
-
-
-
-
-
-
 
 
 #############
 #  Optional:#
-#############
-# Enable C/P from host to vm.  Not necessary in Ubuntu
+#########################################################
+# Enable C/P from host to vm.  Not necessary in Ubuntu ##
+#########################################################
 #https://medium.com/@max.kombarov/install-the-spice-guest-agent-tools-on-a-debian-based-system-in-vm-2bc66fc2d95b
 ####### install on x11 virtualize system only...???
+
 #apt update && apt upgrade -y
 #apt install spice-vdagent
 ##Start the SPICE Agent Service
@@ -117,6 +86,29 @@ reboot
 #OLD_sudo nano /usr/lib/systemd/user/plasma-core.target
 #Add: spice-vdagent.service at the end of line: Wants=
 
+
+########################################################################################################
+# Color variables
+red='\033[0;31m'
+green='\033[0;32m'
+yellow='\033[0;33m'
+blue='\033[0;34m'
+magenta='\033[0;35m'
+cyan='\033[0;36m'
+# Clear the color after that
+clear='\033[0m'
+
+
+# Examples https://stackoverflow.com/questions/24998434/read-command-display-the-prompt-in-color-or-enable-interpretation-of-backslas
+#echo -e "The color is: ${red}red${clear}!"
+#echo -e "The color is: ${green}green${clear}!"
+
+####################
+RESET="\033[0m"
+BOLD="\033[1m"
+YELLOW="\033[38;5;11m"
+#read -p "$(echo -e $BOLD$YELLOW"foo bar "$RESET)" 
+########################################################################################################
 
 
 
