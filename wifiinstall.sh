@@ -7,6 +7,8 @@
 #Before executing!!! Add a "non-free" component to /etc/apt/sources.list for your Debian version, for example: 
 #Debian 12 "Bookworm"
 #deb http://deb.debian.org/debian bookworm main contrib non-free-firmware non-free
+#OR
+#deb http://deb.debian.org/debian/ trixie main non-free-firmware contrib non-free
 
 #Update the list of available packages. Install the relevant/latest linux-image, linux-headers and broadcom-sta-dkms packages
 apt-get update
