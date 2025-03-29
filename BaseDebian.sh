@@ -20,13 +20,15 @@ NC='\033[0m' #no color
 
 # Variables, Packages install
 PKGS=(
-        'kde-plasma-desktop'    # KDE Plasma Desktop
-        'plasma-discover'       # Graphical software manager
-        'plasma-pa'             # Applet for audio volume
-        'kmenuedit'             # Menu editor
-        'firefox-esr'           # Web browser  # chmod a+x /path/to/file && source /path/to/script
-        'fastfetch'             # Fetching system information in terminal
-#        'numlockx'              # Turn NumLock on  - not working
+        'kde-plasma-desktop'        # KDE Plasma Desktop
+        'plasma-discover'           # Graphical software manager
+        'plasma-pa'                 # Applet for audio volume
+        'kmenuedit'                 # Menu editor
+        'firefox-esr'               # Web browser  # chmod a+x /path/to/file && source /path/to/script
+        'fastfetch'                 # Fetching system information in terminal
+#        'numlockx'                  # Turn NumLock on  - not working yet
+        'kde-config-sddm'           # Login Screen (SDDM) System Settings Module
+        'software-properties-qt'    # allows you to easily manage your distribution and independent software vendor software sources
 )
 
 
@@ -58,7 +60,7 @@ echo
 read -p "Press Enter to start KDE installation............................>>>"
 for PKG in "${PKGS[@]}"; do
     echo "INSTALLING: ${PKG}"
-    sudo apt install "$PKG" -y #|| sudo pacman -S "$PKG" --noconfirm --needed
+    sudo apt install "$PKG" #-y #|| sudo pacman -S "$PKG" --noconfirm --needed
     
     #Removing some packages
     sudo apt purge zutty kwalletmanager kdeconnect -y  #Debian || Arch
