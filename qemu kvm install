@@ -93,47 +93,6 @@ reboot
 
 
 
-###########
-# Yuzu  ### Game emulator
-###########
-#https://github.com/edisionnano/Yuzu-Linux-Guide/blob/master/README.md
-#https://yuzu-emulator.net/wiki/building-for-linux/
-
-#Use script installYuzu.sh.
-#Place it inside an empty folder. (This is where Yuzu will be installed)
-#Execute instalYuzu.sh as root. "sudo sh ./installYuzu.sh"
-#Wait for the installer to finish. (It may take up to 10 minutes)
-#Execute "./yuzu-canary/build/bin/yuzu" to launch Yuzu.
-
-#Make the Script Executable: sudo chmod +x ./installYuzu.sh
-
-
-# Script = installYuzu.sh
-
-sudo apt-get install git cmake make
-echo Installing latest YUZU canary build...
-
-#delete files and directories
-rm -rf yuzu-canary
-
-#Last version from march 3rd 2024 - unofficial git
-git clone --recursive https://github.com/cobaltgit/yuzu.git
-
-cd yuzu-canary
-
-
-mkdir build && cd build
-cmake .. -DCMAKE_BUILD_TYPE=Release
-make
-make install
-
-echo Install Complete!
-
-echo Executable: ./yuzu-canary/build/bin/yuzu
-
-#Updating Yuzu
-#To update Yuzu run: "sudo sh ./installYuzu.sh" again. This will automatically uninstall and reinstall the latest version of Yuzu. Note: User specific data (game saves, setting, controller profiles) will NOT be lost when Yuzu is updated.
-
 
 
 
