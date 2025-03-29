@@ -10,7 +10,7 @@
 #cd $PATH                                                              #
 #git clone https://github.com/Jackblow33/DebianMultiScripts.git   #
 #cd DebianMultiScripts                                                 #
-#chmod +x BaseDebian.sh  # permission setting executable               #
+#chmod +x *.sh  # permission setting executable               #
 #./BaseDebian.sh         # Execute Script                              #
 ########################################################################
 
