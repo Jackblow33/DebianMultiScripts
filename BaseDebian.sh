@@ -20,6 +20,7 @@
 GREEN='\033[0;32m'
 NC='\033[0m' #no color
 
+TIMESTAMP=`date +%Y%m%d.%R`
 
 # Variables, Packages install
 PKGS=(
