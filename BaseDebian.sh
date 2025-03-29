@@ -21,7 +21,7 @@ PKGS=(
         'kmenuedit'             # Menu editor
         'firefox-esr'           # Web browser
         'fastfetch'             # Fetching system information in terminal
-        'numlockx'              # Turn NumLock on
+#        'numlockx'              # Turn NumLock on
 )
 
 
@@ -44,7 +44,7 @@ timer_stop()
 
 timer_start
 #Updating package if necessary
-sudo apt update && apt upgrade      #|| sudo pacman -Sy && sudo pacman -Syu
+sudo apt update && sudo apt upgrade      #|| sudo pacman -Sy && sudo pacman -Syu
 
 echo
 echo "Base KDE Plasma instalation"
@@ -52,13 +52,13 @@ echo
 read -p "Press Enter to start KDE installation............................>>>"
 for PKG in "${PKGS[@]}"; do
     echo "INSTALLING: ${PKG}"
-    sudo apt install "$PKG" #|| sudo pacman -S "$PKG" --noconfirm --needed
+    sudo apt install "$PKG" -y #|| sudo pacman -S "$PKG" --noconfirm --needed
     
     #Removing some packages
     sudo apt purge zutty kwalletmanager kdeconnect -y  #Debian
 
     #Turn NumLock on
-    sudo sed -i 's|^exit 0.*$|# Numlock enable\n[ -x /usr/bin/numlockx ] \&\& numlockx on\n\nexit 0|' /etc/init.d/rc.local
+    #sudo sed -i 's|^exit 0.*$|# Numlock enable\n[ -x /usr/bin/numlockx ] \&\& numlockx on\n\nexit 0|' /etc/init.d/rc.local
 done
 
 #add check for install successful
