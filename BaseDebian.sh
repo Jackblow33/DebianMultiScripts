@@ -1,17 +1,16 @@
 #!/bin/bash
-
-
-#PATH=/home/$USER/github
-
-#sudo apt install git
-#sudo mkdir $PATH
-#chmod 700 $PATH
-#cd $PATH
-#sudo git clone https://github.com/Jackblow33/DebianMultiScripts.git
-#cd DebianMultiScripts
-#chmod +x BaseDebian.sh
-#./BaseDebian.sh
-
+########################################################################
+# ENTER THE FOLLOWING COMMANDS BEFORE LOADING THIS SCRIPT ##############
+#PATH=/home/$USER/github                                               #
+#sudo apt install git                                                  #
+#sudo mkdir $PATH                                                      #
+#chmod 700 $PATH          # give user Read/Write/execute permissions   #
+#cd $PATH                                                              #
+#sudo git clone https://github.com/Jackblow33/DebianMultiScripts.git   #
+#cd DebianMultiScripts                                                 #
+#chmod +x BaseDebian.sh  # permission setting executable               #
+#./BaseDebian.sh         # Execute Script                              #
+########################################################################
 
 #        'plasma-nm'             # Applet network manager
 PKGS=(
