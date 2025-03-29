@@ -32,6 +32,7 @@ PKGS=(
         'firefox-esr'               # Web browser  # chmod a+x /path/to/file && source /path/to/script
         'fastfetch'                 # Fetching system information in terminal
         'numlockx'                  # Turn NumLock on
+        'gparted'                   # Partition utility
 #        'kde-config-sddm'           # Login Screen (SDDM) System Settings Module
 #        'software-properties-qt'    # allows you to easily manage your distribution and independent software vendor software sources
 )
