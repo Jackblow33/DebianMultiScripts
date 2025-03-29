@@ -65,7 +65,14 @@ sudo apt update && sudo apt upgrade      #|| sudo pacman -Sy && sudo pacman -Syu
 echo
 echo "Base KDE Plasma instalation"
 echo
+
 read -p "Press Enter to start KDE installation............................>>>"
+
+#Enabling additional repos  -untested
+#sed -i 's/^Components: main$/& contrib non-free non-free-firmware/' /etc/apt/sources.list.d/debian.sources
+#sudo apt update
+
+#Packages installer
 for PKG in "${PKGS[@]}"; do
     echo "INSTALLING: ${PKG}"
     sudo apt install "$PKG" #-y #|| sudo pacman -S "$PKG" --noconfirm --needed
