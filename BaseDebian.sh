@@ -1,10 +1,10 @@
 #!/bin/bash
 ########################################################################
-# ENTER THE FOLLOWING COMMANDS BEFORE LOADING THIS SCRIPT ##############
+# ENTER THE FOLLOWING COMMANDS AS USER BEFORE LOADING THIS SCRIPT ######
 ########################################################################
-#Run as user:                                                          #
+#Run as user: So no sudo su.....                                       #
 #PATH=/home/$USER/github                                               #
-#sudo apt modernize-sources
+#sudo apt modernize-sources                                            #
 #sudo apt update && sudo apt upgrade                                   #
 #sudo apt install git -y                                               #
 #mkdir $PATH                                                           #
