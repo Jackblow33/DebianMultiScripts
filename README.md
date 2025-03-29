@@ -6,4 +6,4 @@ ISO: https://cdimage.debian.org/cdimage/weekly-builds/amd64/iso-cd/debian-testin
 
 ![Screenshot_20250326_211755](https://github.com/user-attachments/assets/1fd8db37-0854-46cd-8222-2959b45fbf86)
 
-![carbon(2)](https://github.com/user-attachments/assets/807d4a47-ae3b-4bbb-8d83-f43911b1940a)
+![carbon(3)](https://github.com/user-attachments/assets/b4f5ba36-114a-4e4b-835b-b52346a5ed9a)
