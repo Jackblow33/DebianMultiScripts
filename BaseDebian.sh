@@ -62,18 +62,18 @@ read -p "Press Enter to start KDE installation............................>>>"
 for PKG in "${PKGS[@]}"; do
     echo "INSTALLING: ${PKG}"
     sudo apt install "$PKG" #-y #|| sudo pacman -S "$PKG" --noconfirm --needed
-    
-    #Removing some packages
+done
+
+#Removing some packages
     sudo apt purge zutty kwalletmanager kdeconnect -y  #Debian || Arch
 
-    #Turn NumLock on - numlockx KDE  ###problematic add entrie every reeboot
+    #Turn NumLock on - numlockx KDE
     #add do .BAK_timestamp of sddm.conf
-    #sudo /bin/sh -c 'echo "Numlock=on" >> /etc/sddm.conf'
+    sudo /bin/sh -c 'echo "Numlock=on" >> /etc/sddm.conf' #|| Arch
     
-    #fastfetch auto load in terminal ###problematic add entrie every reeboot
+    #fastfetch auto load in terminal
     #add do .BAK_timestamp of .bashrc
-    #echo "fastfetch" >> ~/.bashrc
-done
+    echo "fastfetch" >> ~/.bashrc  #|| Arch
 
 #add check for install successful
 echo
