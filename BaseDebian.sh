@@ -66,8 +66,8 @@ for PKG in "${PKGS[@]}"; do
     #Removing some packages
     sudo apt purge zutty kwalletmanager kdeconnect -y  #Debian || Arch
 
-    #Turn NumLock on - not working
-    #sudo sed -i 's|^exit 0.*$|# Numlock enable\n[ -x /usr/bin/numlockx ] \&\& numlockx on\n\nexit 0|' /etc/init.d/rc.local
+    #Turn NumLock on
+    sudo /bin/sh -c 'echo "Numlock=on" >> /etc/sddm.conf'
 done
 
 #add check for install successful
