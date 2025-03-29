@@ -19,7 +19,7 @@ PKGS=(
         'plasma-discover'       # Graphical software manager
         'plasma-pa'             # Applet for audio volume
         'kmenuedit'             # Menu editor
-        'firefox-esr'           # Web browser  # source /path/to/script
+        'firefox-esr'           # Web browser  # chmod a+x /path/to/file && source /path/to/script
         'fastfetch'             # Fetching system information in terminal
 #        'numlockx'              # Turn NumLock on
 )
