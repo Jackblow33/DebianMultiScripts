@@ -45,6 +45,7 @@ timer_stop()
 
 timer_start
 #Updating package if necessary
+apt modernize-sources
 sudo apt update && sudo apt upgrade      #|| sudo pacman -Sy && sudo pacman -Syu
 
 echo
