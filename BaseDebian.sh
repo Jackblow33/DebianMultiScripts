@@ -70,12 +70,13 @@ done
     sudo apt purge zutty kwalletmanager kdeconnect -y  #Debian || Arch
 
     #Turn NumLock on - numlockx KDE
-    #add do .BAK_timestamp of sddm.conf
-    
+    #Make a copy of sddm.conf before edit
+    cp /etc/sddm.conf /etc/sddm.conf.$TIMESTAMP
     sudo /bin/sh -c 'echo "Numlock=on" >> /etc/sddm.conf' #|| Arch
     
     #fastfetch auto load in terminal
-    #add do .BAK_timestamp of .bashrc
+    #Make a copy of .bashrc before edit
+    cp ~/.bashrc ~/.bashrc.$TIMESTAMP
     echo "fastfetch" >> ~/.bashrc  #|| Arch
 
 #add check for install successful
