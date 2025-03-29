@@ -67,7 +67,12 @@ for PKG in "${PKGS[@]}"; do
     sudo apt purge zutty kwalletmanager kdeconnect -y  #Debian || Arch
 
     #Turn NumLock on
+    #add do .BAK_timestamp of sddm.conf
     sudo /bin/sh -c 'echo "Numlock=on" >> /etc/sddm.conf'
+    
+    #fastfetch auto load in terminal
+    #add do .BAK_timestamp of .bashrc
+    #sudo sed '1 s/^/fastfetch\n/' /home/.bashrc   #-does not work
 done
 
 #add check for install successful
