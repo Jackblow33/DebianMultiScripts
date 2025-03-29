@@ -68,11 +68,11 @@ for PKG in "${PKGS[@]}"; do
 
     #Turn NumLock on - numlockx KDE
     #add do .BAK_timestamp of sddm.conf
-    sudo /bin/sh -c 'echo "Numlock=on" >> /etc/sddm.conf'
+    #sudo /bin/sh -c 'echo "Numlock=on" >> /etc/sddm.conf'
     
     #fastfetch auto load in terminal
     #add do .BAK_timestamp of .bashrc
-    echo "fastfetch" >> ~/.bashrc
+    #echo "fastfetch" >> ~/.bashrc
 done
 
 #add check for install successful
