@@ -35,7 +35,9 @@ PKGS=(
         'fastfetch'                 # Fetching system information in terminal
         'numlockx'                  # Turn NumLock on
         'gparted'                   # Partition utility
-        'ark unrar rar'             # Ark manages various archive formats
+        'ark'                       # Ark manages various archive formats
+        'unrar'                     # UnRar
+        'rar'                       # Rar
         'vlc'                       # VLC is free software to play, transcode and broadcast video and audio files
 #        'kde-config-sddm'           # Login Screen (SDDM) System Settings Module
 #        'software-properties-qt'    # allows you to easily manage your distribution and independent software vendor software sources
@@ -60,7 +62,7 @@ timer_stop()
 
 timer_start
 #Updating package if necessary
-apt modernize-sources
+sudo apt modernize-sources
 sudo apt update && sudo apt upgrade      #|| sudo pacman -Sy && sudo pacman -Syu
 
 echo
