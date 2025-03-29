@@ -66,11 +66,11 @@ for PKG in "${PKGS[@]}"; do
     #Removing some packages
     sudo apt purge zutty kwalletmanager kdeconnect -y  #Debian || Arch
 
-    #Turn NumLock on - numlockx KDE
+    #Turn NumLock on - numlockx KDE  ###problematic add entrie every reeboot
     #add do .BAK_timestamp of sddm.conf
     #sudo /bin/sh -c 'echo "Numlock=on" >> /etc/sddm.conf'
     
-    #fastfetch auto load in terminal
+    #fastfetch auto load in terminal ###problematic add entrie every reeboot
     #add do .BAK_timestamp of .bashrc
     #echo "fastfetch" >> ~/.bashrc
 done
