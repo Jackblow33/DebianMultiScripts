@@ -8,4 +8,4 @@ sudo apt install linux-image-amd64 linux-headers-amd64 broadcom-sta-dkms wireles
 
 #
 Unloading and reloading modules
-modprobe -r wl && sudo modprobe wl
+sudo modprobe -r wl && sudo modprobe wl
