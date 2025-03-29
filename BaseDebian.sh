@@ -72,7 +72,7 @@ for PKG in "${PKGS[@]}"; do
     
     #fastfetch auto load in terminal
     #add do .BAK_timestamp of .bashrc
-    #sudo sed '1 s/^/fastfetch\n/' /home/.bashrc   #-does not work
+    echo "fastfetch" >> ~/.bashrc
 done
 
 #add check for install successful
