@@ -16,13 +16,15 @@
 #./BaseDebian.sh         # Execute Script                              #
 ########################################################################
 
+#VARIABLES
 # Colors
 GREEN='\033[0;32m'
 NC='\033[0m' #no color
 
+#VARIABLES
 TIMESTAMP=`date +%Y%m%d.%R`
 
-#Variables
+#VARIABLES
 # Packages install
 PKGS=(
         'kde-plasma-desktop'        # KDE Plasma Desktop
@@ -43,6 +45,7 @@ timer_start()
 BEGIN=$(date +%s)
 }
 
+#Fonctions
 timer_stop()
 {
     NOW=$(date +%s)
