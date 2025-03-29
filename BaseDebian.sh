@@ -39,13 +39,13 @@ PKGS=(
 #        'software-properties-qt'    # allows you to easily manage your distribution and independent software vendor software sources
 )
 
-#Fonctions
+#fonctions
 timer_start()
 {
 BEGIN=$(date +%s)
 }
 
-#Fonctions
+#fonctions
 timer_stop()
 {
     NOW=$(date +%s)
