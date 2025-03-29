@@ -72,6 +72,7 @@ echo
 read -p "Press Enter to start KDE installation............................>>>"
 
 #Enabling additional repos  -untested
+#cp /etc/apt/sources.list.d/debian.sources /etc/apt/sources.list.d/debian.sources_$TIMESTAMP
 #sed -i 's/^Components: main$/& contrib non-free non-free-firmware/' /etc/apt/sources.list.d/debian.sources
 #sudo apt update
 
