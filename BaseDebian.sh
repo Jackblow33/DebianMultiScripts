@@ -68,7 +68,7 @@ for PKG in "${PKGS[@]}"; do
 done
 
 #Removing some packages
-    sudo apt purge zutty kwalletmanager kdeconnect -y  #Debian || Arch
+    sudo apt purge zutty kwalletmanager kdeconnect partitionmanager -y  #Debian || Arch
 
     #Turn NumLock on - numlockx KDE
     #Make a copy of sddm.conf before edit
