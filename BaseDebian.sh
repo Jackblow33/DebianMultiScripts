@@ -52,7 +52,7 @@ echo
 read -p "Press Enter to start KDE installation............................>>>"
 for PKG in "${PKGS[@]}"; do
     echo "INSTALLING: ${PKG}"
-    sudo apt install "$PKG" -y #|| sudo pacman -S "$PKG" --noconfirm --needed
+    sudo apt install "$PKG" #|| sudo pacman -S "$PKG" --noconfirm --needed
     
     #Removing some packages
     sudo apt purge zutty kwalletmanager kdeconnect -y  #Debian
