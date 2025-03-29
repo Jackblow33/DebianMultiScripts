@@ -1,6 +1,6 @@
 # DebianMultiScripts Trixie Alpha KDE_debloat
 
-# Basic custom installation Shell scripts collection for Debian 12 Bookworm and “trixie” Releases.
+Basic custom installation Shell scripts collection for Debian 12 Bookworm and “trixie” Releases.
 
 ISO: https://cdimage.debian.org/cdimage/weekly-builds/amd64/iso-cd/debian-testing-amd64-netinst.iso
 
