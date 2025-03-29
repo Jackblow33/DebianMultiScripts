@@ -2,19 +2,23 @@
 ########################################################################
 # ENTER THE FOLLOWING COMMANDS BEFORE LOADING THIS SCRIPT ##############
 #PATH=/home/$USER/github                                               #
-#sudo su
-#apt update && apt upgrade                                        #
-#apt install git -y                                                 #
-#mkdir $PATH                                                      #
+#sudo apt update && sudo apt upgrade                                   #
+#sudo apt install git -y                                               #
+#mkdir $PATH                                                           #
 #chmod 700 $PATH          # give user Read/Write/execute permissions   #
 #cd $PATH                                                              #
-#git clone https://github.com/Jackblow33/DebianMultiScripts.git   #
+#sudo git clone https://github.com/Jackblow33/DebianMultiScripts.git   #
 #cd DebianMultiScripts                                                 #
-#chmod +x *.sh  # permission setting executable               #
+#chmod +x *.sh  # permission setting executable                        #
 #./BaseDebian.sh         # Execute Script                              #
 ########################################################################
 
-#        'plasma-nm'             # Applet network manager
+# Color variables
+GREEN='\033[0;32m'
+NC='\033[0m' #no color
+
+
+# Variables, Packages install
 PKGS=(
         'kde-plasma-desktop'    # KDE Plasma Desktop
         'plasma-discover'       # Graphical software manager
@@ -22,7 +26,7 @@ PKGS=(
         'kmenuedit'             # Menu editor
         'firefox-esr'           # Web browser  # chmod a+x /path/to/file && source /path/to/script
         'fastfetch'             # Fetching system information in terminal
-#        'numlockx'              # Turn NumLock on
+#        'numlockx'              # Turn NumLock on  - not working
 )
 
 
@@ -57,19 +61,19 @@ for PKG in "${PKGS[@]}"; do
     sudo apt install "$PKG" -y #|| sudo pacman -S "$PKG" --noconfirm --needed
     
     #Removing some packages
-    sudo apt purge zutty kwalletmanager kdeconnect -y  #Debian
+    sudo apt purge zutty kwalletmanager kdeconnect -y  #Debian || Arch
 
-    #Turn NumLock on
+    #Turn NumLock on - not working
     #sudo sed -i 's|^exit 0.*$|# Numlock enable\n[ -x /usr/bin/numlockx ] \&\& numlockx on\n\nexit 0|' /etc/init.d/rc.local
 done
 
 #add check for install successful
 echo
-echo "Installation completed successfully"
+echo -e "${GREEN}Installation ran sucessfully!${NC}"
 echo
 timer_stop
 #error check
-read -p "Install completed! Press Enter to boot............................>>>"
+read -p "Installation completed! Press Enter to boot............................>>>"
 
 #Enable Network manager
      sudo systemctl enable NetworkManager
@@ -77,8 +81,8 @@ read -p "Install completed! Press Enter to boot............................>>>"
 #Enable sddm so it get started on boot
     sudo systemctl enable sddm
 #Boot    
-    sudo systemctl start sddm
-
+#    sudo systemctl start sddm
+reboot
 
     
     ### Jackblow33 2025 #####################
