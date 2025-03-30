@@ -38,6 +38,7 @@ PKGS=(
         'ark'                       # Ark manages various archive formats
         'unrar'                     # UnRar
         'rar'                       # Rar
+        'timeshift'                 # Timeshift is a program used to make system back-ups/snapshots easily
         'vlc'                       # VLC is free software to play, transcode and broadcast video and audio files
 #        'kde-config-sddm'           # Login Screen (SDDM) System Settings Module
 #        'software-properties-qt'    # allows you to easily manage your distribution and independent software vendor software sources
