@@ -130,5 +130,4 @@ dragonplayer
 libreoffice-math && sudo apt autoremove libreoffice-uiconfig-math
 sudo apt remove juk
 akregator
-sudo apt remove konqueror
 
