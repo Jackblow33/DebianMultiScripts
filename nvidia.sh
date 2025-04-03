@@ -6,6 +6,10 @@
 #GPU Identification
 lspci -nn | egrep -i "3d|display|vga"
 
+#Check for driver version before installing
+# If driver: nouveau. Then you have open sources driver. Update might be a good idea...
+lspci -v
+
 #Add contrib non-free & non-free-firmware components to /etc/apt/sources.list
 
 #detect gpu and suggest drivers
