@@ -9,9 +9,10 @@ lspci -nn | egrep -i "3d|display|vga"
 #Add contrib non-free & non-free-firmware components to /etc/apt/sources.list
 
 #detect gpu and suggest drivers
-sudo apt install nvidia detect
+sudo apt install nvidia-detect
+nvidia-detect
 
-#If your system uses dracut
+#If your system uses dracut  - NOT in my case
 #Make a dracut configuration file /etc/dracut.conf.d/10-nvidia.conf with this
 #install_items+=" /etc/modprobe.d/nvidia-blacklists-nouveau.conf /etc/modprobe.d/nvidia.conf /etc/modprobe.d/nvidia-options.conf "
 
