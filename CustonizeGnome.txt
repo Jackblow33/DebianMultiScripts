@@ -1,2 +1,5 @@
 How to Customize Gnome 42.2 in Debian Testing
 https://www.youtube.com/watch?v=A3_hajTrcFw
+
+MacOS like
+https://www.youtube.com/watch?v=l_j1ch8VCW8
