@@ -39,6 +39,34 @@ sudo shutdown -r now      #reboot
 
 
 
+###To install the "Ubuntu Dock" (formerly Dash to Dock) extension on Debian
+    #git clone https://github.com/micheleg/dash-to-dock.git -b ubuntu-dock
+    #cd dash-to-dock          #Change into the newly cloned directory
+    #make && make install     #Run the following commands to build the extension
+
+### Enable the Extension:
+
+    #You can now enable the extension using the gnome-tweaks tool:
+        #Open the gnome-tweaks tool (if you don't have it installed, install it with sudo apt install gnome-tweaks).
+        #Go to the "Extensions" section.
+        #Find "Ubuntu Dock" (or "dash-to-dock") in the list and enable it.
+
+ 
+### Alternative (Manual Installation):
+
+    #You can also manually install the extension by extracting the zip archive from the release page into the ~/.local/share/gnome-shell/extensions/ directory.
+        #The directory for the extension should be named ubuntu-dock@ubuntu.com.
+        #Then, reload the shell as described above and enable the extension through gnome-tweaks. 
+
+
+
+
+
+
+
+
+
+
 
 
 #git clone https://github.com/micheleg/dash-to-dock.git   #https://github.com/micheleg/dash-to-dock
