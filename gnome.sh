@@ -26,8 +26,9 @@ for PKG in "${PKGS[@]}"; do
     sudo apt install "$PKG" #-y #|| sudo pacman -S "$PKG" --noconfirm --needed
 done
 
-sudo apt purge ifupdown
-sudo apt purge gnome-text-editor -y && sudo apt autoremove gnome-text-editor -y
+#remove apps
+sudo apt purge ifupdown gnome-text-editor -y && sudo apt autoremove gnome-text-editor -y
+
 sudo sed -i "s/managed=false/managed=true/" /etc/NetworkManager/NetworkManager.conf
 echo "#########################################################"
 echo "# Editing NetworkManager: managed=false to managed=true #"
