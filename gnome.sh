@@ -12,6 +12,7 @@ read -p "Press Enter to edit"
 sudo nano /etc/NetworkManager/NetworkManager.conf
 #Check system|network|IPv4 and make sure static ip address or dhcp is set properly
 #sudo apt install gnome-session nautilus gnome-terminal git firefox-esr wget gedit
+#Remove gnome-text-editor  ???
 echo "Press [enter] to reboot"; read enterKey
 sudo shutdown -r now      #reboot
 
