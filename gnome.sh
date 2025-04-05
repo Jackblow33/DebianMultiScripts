@@ -34,7 +34,21 @@ sudo shutdown -r now      #reboot
 
 
 
+#To toggle autohide, you could use a script like this:
 
+        #!/bin/bash
+
+        # Get current autohide setting
+        #current_setting=$(gsettings get org.gnome.shell.extensions.dash-to-dock autohide)
+
+        # Toggle autohide based on current setting
+        #if [[ "$current_setting" == "true" ]]; then
+            gsettings set org.gnome.shell.extensions.dash-to-dock autohide false
+            echo "Autohide disabled"
+        #else
+            gsettings set org.gnome.shell.extensions.dash-to-dock autohide true
+            echo "Autohide enabled"
+        #fi
 
 
 #How to Customize Gnome 42.2 in Debian Testing
