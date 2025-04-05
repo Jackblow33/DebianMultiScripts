@@ -7,7 +7,9 @@ sudo apt update && sudo apt upgrade
 sudo apt install gnome-core  #or gnome-base    https://www.youtube.com/watch?v=zy-5UHC3t-Q
 sudo apt purge ifupdown
 #sudo shutdown -r now #reboot
-echo "edit: managed=false to managed=true"
+echo "#######################################"
+echo "# Edit: managed=false to managed=true #"
+echo "#######################################"
 read -p "Press Enter to edit"
 sudo nano /etc/NetworkManager/NetworkManager.conf
 #Check system|network|IPv4 and make sure static ip address or dhcp is set properly
