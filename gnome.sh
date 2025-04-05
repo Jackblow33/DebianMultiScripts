@@ -18,7 +18,7 @@ sudo shutdown -r now      #reboot
 ###I#nstall gnome browser evtensions first: https://extensions.gnome.org/ OR better next
 #sudo apt install gnome-shell-extension-manager  #gnome-shell-extension-prefs
 ###Add dash to dock: https://extensions.gnome.org/extension/307/dash-to-dock/
-#cd /home/$USER/Download
+#cd /home/$USER/Downloads
 #wget https://extensions.gnome.org/extension-data/dash-to-dockmicxgx.gmail.com.v71.shell-extension.zip
 #unzip dash-to-dockmicxgx.gmail.com.v71.shell-extension.zip \ -d ~/.local/share/gnome-shell/extensions/dash-to-dock@micxgx.gmail.com/
 ###Add minimize / maximize buttons
