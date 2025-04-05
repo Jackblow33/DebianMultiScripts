@@ -16,6 +16,10 @@ sudo apt purge text-editor && sudo apt autoremove text-editor
 echo "Press [enter] to reboot"; read enterKey
 sudo shutdown -r now      #reboot
 
+
+git clone https://github.com/micheleg/dash-to-dock.git   #https://github.com/micheleg/dash-to-dock
+make -C dash-to-dock install
+
 ###I#nstall gnome browser evtensions first: https://extensions.gnome.org/ OR better next
 #Already installed??? sudo apt install gnome-shell-extension-prefs        #gnome-shell-extension-manager
 #Already installes??? sudo apt-get install gnome-browser-connector
