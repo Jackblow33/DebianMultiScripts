@@ -50,6 +50,13 @@ sudo shutdown -r now      #reboot
             echo "Autohide enabled"
         #fi
 
+#Automating with gsettings:
+
+#Setting Dock Position: You can change the dock's position (left, right, bottom) using gsettings. 
+
+        #gsettings set org.gnome.shell.extensions.dash-to-dock dock-position "bottom"
+        
+
 
 #How to Customize Gnome 42.2 in Debian Testing
 #https://www.youtube.com/watch?v=A3_hajTrcFw
