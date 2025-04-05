@@ -30,6 +30,8 @@ sudo shutdown -r now      #reboot
 ###To make the dock fixed (not movable), use: 
 #gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false.
 
+#Alternate method https://askubuntu.com/questions/1204214/use-gnome-dash-to-dock-without-autohide
+
 
 
 
