@@ -26,7 +26,7 @@ gsettings set org.gnome.desktop.wm.preferences button-layout 'appmenu:minimize,m
 #Log out & login. That's it
 echo "Press [enter] to reboot"; read enterKey
 sudo shutdown -r now #reboot
-
+#READ https://micheleg.github.io/dash-to-dock/download.html
 
 
 
