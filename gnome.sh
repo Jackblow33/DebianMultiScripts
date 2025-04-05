@@ -7,13 +7,14 @@ sudo apt update && sudo apt upgrade
 sudo apt install gnome-core  #or gnome-base    https://www.youtube.com/watch?v=zy-5UHC3t-Q
 sudo apt purge ifupdown
 #sudo shutdown -r now #reboot
+sed -i "s/managed=false/managed=true/" /etc/NetworkManager/NetworkManager.conf
 echo "#######################################"
 echo "# Edit: managed=false to managed=true #"
 echo "#######################################"
 read -p "Press Enter to edit"
 sudo nano /etc/NetworkManager/NetworkManager.conf
 #Check system|network|IPv4 and make sure static ip address or dhcp is set properly
-sudo apt install gedit            #make gettext sassc #build dependencies for compiling dash-to-dock
+sudo apt install gedit make gettext sassc          #build dependencies included for compiling dash-to-dock
 sudo apt purge text-editor && sudo apt autoremove text-editor
 echo "Press [enter] to reboot"; read enterKey
 sudo shutdown -r now      #reboot
