@@ -11,9 +11,9 @@ echo "edit: managed=false to managed=true"
 read -p "Press Enter to edit"
 sudo nano /etc/NetworkManager/NetworkManager.conf
 #Check system|network|IPv4 and make sure static ip address or dhcp is set properly
-sudo apt install gnome-session nautilus gnome-terminal git firefox-esr wget gedit
+#sudo apt install gnome-session nautilus gnome-terminal git firefox-esr wget gedit
 echo "Press [enter] to reboot"; read enterKey
-sudo shutdown -r now #reboot
+sudo shutdown -r now      #reboot
 
 ###I#nstall gnome browser evtensions first: https://extensions.gnome.org/ OR better next
 #sudo apt install gnome-shell-extension-manager  #gnome-shell-extension-prefs
