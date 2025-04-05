@@ -7,7 +7,7 @@ sudo apt update && sudo apt upgrade
 sudo apt install gnome-core  #or gnome-base    https://www.youtube.com/watch?v=zy-5UHC3t-Q
 sudo apt purge ifupdown
 #sudo shutdown -r now #reboot
-sed -i "s/managed=false/managed=true/" /etc/NetworkManager/NetworkManager.conf
+sudo sed -i "s/managed=false/managed=true/" /etc/NetworkManager/NetworkManager.conf
 echo "#######################################"
 echo "# Edit: managed=false to managed=true #"
 echo "#######################################"
