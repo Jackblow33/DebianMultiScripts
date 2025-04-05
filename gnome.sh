@@ -19,7 +19,7 @@ sudo shutdown -r now      #reboot
 #sudo apt install gnome-shell-extension-manager  #gnome-shell-extension-prefs
 ###Add dash to dock: https://extensions.gnome.org/extension/307/dash-to-dock/
 #cd /home/$USER/Downloads
-#wget https://extensions.gnome.org/extension-data/dash-to-dockmicxgx.gmail.com.v71.shell-extension.zip
+#sudo wget https://extensions.gnome.org/extension-data/dash-to-dockmicxgx.gmail.com.v71.shell-extension.zip
 #unzip dash-to-dockmicxgx.gmail.com.v71.shell-extension.zip \ -d ~/.local/share/gnome-shell/extensions/dash-to-dock@micxgx.gmail.com/
 ###Add minimize / maximize buttons
 #gsettings set org.gnome.desktop.wm.preferences button-layout 'appmenu:minimize,maximize,close'
