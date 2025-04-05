@@ -18,7 +18,8 @@ echo "Press [enter] to reboot"; read enterKey
 sudo shutdown -r now      #reboot
 
 ###I#nstall gnome browser evtensions first: https://extensions.gnome.org/ OR better next
-#sudo apt install gnome-shell-extension-prefs        #gnome-shell-extension-manager 
+#sudo apt install gnome-shell-extension-prefs        #gnome-shell-extension-manager
+#sudo apt-get install gnome-browser-connector
 ###Add dash to dock: https://extensions.gnome.org/extension/307/dash-to-dock/
 #cd /home/$USER/Downloads
 #sudo wget https://extensions.gnome.org/extension-data/dash-to-dockmicxgx.gmail.com.v71.shell-extension.zip
@@ -27,8 +28,6 @@ sudo shutdown -r now      #reboot
 ###Add minimize / maximize buttons
 #gsettings set org.gnome.desktop.wm.preferences button-layout 'appmenu:minimize,maximize,close'
 #gsettings set org.gnome.shell.extensions.dash-to-dock pinned-apps "['org.gnome.help']"
-#gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed true
-#gsettings set org.gnome.shell.extensions.dash-to-dock autohide false
 ###Log out & login. That's it
 #echo "Press [enter] to reboot"; read enterKey
 #sudo shutdown -r now #reboot
