@@ -19,7 +19,7 @@ echo "Press [enter] to reboot"; read enterKey
 sudo shutdown -r now      #reboot
 
 #Install and setup gnome extensions
-#sudo apt gnome-shell-extension-dash-to-panel
+#sudo apt install gnome-shell-extension-dash-to-panel
 #gnome-extensions enable dash-to-dock@micxgx.gmail.com
 #gsettings set org.gnome.desktop.wm.preferences button-layout 'appmenu:minimize,maximize,close'
 #gsettings set org.gnome.shell.extensions.dash-to-dock pinned-apps "['org.gnome.help']"
