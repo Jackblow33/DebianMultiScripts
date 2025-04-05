@@ -21,7 +21,7 @@ sudo shutdown -r now      #reboot
 #Already installes??? sudo apt-get install gnome-browser-connector
 ###Add dash to dock: https://extensions.gnome.org/extension/307/dash-to-dock/
 ######  cd /home/$USER/Downloads
-#sudo wget https://extensions.gnome.org/extension-data/dash-to-dockmicxgx.gmail.com.v71.shell-extension.zip
+#wget https://extensions.gnome.org/extension-data/dash-to-dockmicxgx.gmail.com.v71.shell-extension.zip
 #####   sudo mkdir /home/$USER/.local/share/gnome-shell//extensions
 #unzip dash-to-dockmicxgx.gmail.com.v71.shell-extension.zip \ -d ~/.local/share/gnome-shell/extensions/dash-to-dock@micxgx.gmail.com      #/
 #gnome-extensions enable dash-to-dock@micxgx.gmail.com
