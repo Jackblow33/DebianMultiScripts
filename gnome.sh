@@ -24,6 +24,16 @@ sudo shutdown -r now      #reboot
 #gsettings set org.gnome.desktop.wm.preferences button-layout 'appmenu:minimize,maximize,close'
 #gsettings set org.gnome.shell.extensions.dash-to-dock pinned-apps "['org.gnome.help']"
 
+###To disable "intellihide" (a specific type of auto-hide), use:
+#gsettings set org.gnome.shell.extensions.dash-to-dock intellihide false
+
+###To make the dock fixed (not movable), use: 
+#gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false.
+
+
+
+
+
 
 
 
