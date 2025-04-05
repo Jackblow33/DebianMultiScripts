@@ -6,3 +6,5 @@ https://www.youtube.com/watch?v=l_j1ch8VCW8
 
 Gnome Extensions You Need to Know (Dash to Dock to Panel)
 https://www.youtube.com/watch?v=erwrZe_REYw
+
+https://askubuntu.com/questions/1106481/can-i-configure-gnome-to-show-open-windows-on-the-dock-individually
