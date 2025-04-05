@@ -11,14 +11,25 @@ echo "edit: managed=false to managed=true"
 read -p "Press Enter to edit"
 sudo nano /etc/NetworkManager/NetworkManager.conf
 #Check system|network|IPv4 and make sure static ip address or dhcp is set properly
-sudo apt install gedit sassc gettext #make
+sudo apt install gedit            #make gettext sassc #build dependencies for compiling dash-to-dock
 sudo apt purge text-editor && sudo apt autoremove text-editor
 echo "Press [enter] to reboot"; read enterKey
 sudo shutdown -r now      #reboot
 
+#sudo apt gnome-shell-extension-dash-to-panel
+#gnome-extensions enable dash-to-dock@micxgx.gmail.com
+#gsettings set org.gnome.desktop.wm.preferences button-layout 'appmenu:minimize,maximize,close'
+#gsettings set org.gnome.shell.extensions.dash-to-dock pinned-apps "['org.gnome.help']"
 
-git clone https://github.com/micheleg/dash-to-dock.git   #https://github.com/micheleg/dash-to-dock
-make -C dash-to-dock install
+
+
+
+
+
+
+
+#git clone https://github.com/micheleg/dash-to-dock.git   #https://github.com/micheleg/dash-to-dock
+#make -C dash-to-dock install
 
 ###I#nstall gnome browser evtensions first: https://extensions.gnome.org/ OR better next
 #Already installed??? sudo apt install gnome-shell-extension-prefs        #gnome-shell-extension-manager
