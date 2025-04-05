@@ -14,8 +14,8 @@ echo "#########################################################"
 read -p "Press Enter to edit"
 sudo nano /etc/NetworkManager/NetworkManager.conf
 #Check system|network|IPv4 and make sure static ip address or dhcp is set properly
-sudo apt install gedit make gettext sassc          #build dependencies included for compiling dash-to-dock
-sudo apt purge text-editor && sudo apt autoremove text-editor
+sudo apt install gedit make gettext sassc -y         #build dependencies included for compiling dash-to-dock
+sudo apt purge gnome-text-editor -y && sudo apt autoremove gnome-text-editor -y
 echo "Press [enter] to reboot"; read enterKey
 sudo shutdown -r now      #reboot
 
