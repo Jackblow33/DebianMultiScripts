@@ -3,6 +3,7 @@
 #Test first: https://extensions.gnome.org/extension/307/dash-to-dock/
 #https://wiki.debian.org/Gnome
 
+sudo apt update && sudo apt upgrade
 sudo apt install gnome-core  #or gnome-base    https://www.youtube.com/watch?v=zy-5UHC3t-Q
 sudo apt purge ifupdown
 #sudo shutdown -r now #reboot
