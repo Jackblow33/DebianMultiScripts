@@ -33,6 +33,12 @@ sudo shutdown -r now      #reboot
 #sudo shutdown -r now #reboot
 ###READ https://micheleg.github.io/dash-to-dock/download.html
 
+#New examples
+gnome-extensions enable dash-to-dock@micxgx.gmail.com
+#gnome-extensions disable dash-to-dock@micxgx.gmail.com     #Disables the extension
+#gnome-extensions list                                      #Lists all installed extensions
+#gnome-extensions info dash-to-dock@micxgx.gmail.com        #Displays information about the extension
+#gnome-extensions uninstall dash-to-dock@micxgx.gmail.com   #Uninstalls the extension
 
 
 #To toggle autohide, you could use a script like this:
