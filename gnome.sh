@@ -12,7 +12,7 @@ PKGS=(
         'gettext'                   # build depends for dash-to-dock
         'sassc'                     # build depends for dash-to-dock
         'fastfetch'                 # Fetching system information in terminal
-        'numlockx'                  # Turn NumLock on
+#        'numlockx'                  # Turn NumLock on
         'gparted'                   # Partition utility
         'unrar'                     # UnRar
         'rar'                       # Rar
