@@ -14,8 +14,6 @@ PKGS=(
         'fastfetch'                 # Fetching system information in terminal
 #        'numlockx'                  # Turn NumLock on
         'gparted'                   # Partition utility
-        'unrar'                     # UnRar
-        'rar'                       # Rar
         'timeshift'                 # Timeshift is a program used to make system back-ups/snapshots easily
         'vlc'                       # VLC is free software to play, transcode and broadcast video and audio files
 )
