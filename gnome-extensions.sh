@@ -1,6 +1,16 @@
 #!/bin/bash
 
 
+sudo git clone https://github.com/micheleg/dash-to-dock.git
+#rename to dash-to-dock@micxgx.gmail.com
+mv dash-to-dock dash-to-dock@micxgx.gmail.com
+cd dash-to-dock@micxgx.gmail.com
+sudo make && sudo make install     #Run the following commands to build the extension
+cd ~/.local/share/gnome-shell/extensions/
+sudo apt install gnome-shell-extension-dash-to-panel
+gnome-extensions enable dash-to-dock@micxgx.gmail.com
+
+
 
 #Install and setup gnome extensions
 #sudo apt install gnome-shell-extension-dash-to-panel
