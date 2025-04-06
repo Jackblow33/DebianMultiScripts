@@ -12,7 +12,6 @@ PKGS=(
         'gettext'                   # build depends for dash-to-dock
         'sassc'                     # build depends for dash-to-dock
         'fastfetch'                 # Fetching system information in terminal
-#        'numlockx'                  # Turn NumLock on
         'gparted'                   # Partition utility
         'timeshift'                 # Timeshift is a program used to make system back-ups/snapshots easily
         'vlc'                       # VLC is free software to play, transcode and broadcast video and audio files
