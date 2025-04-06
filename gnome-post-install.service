@@ -1,0 +1,9 @@
+[Unit]
+Description=Post installation - enabling extension dash-to-dock - dash-to-panel
+[Service]
+Type=simple
+ExecStart=/home/$USER/gnome-extensions.sh
+[Install]
+WantedBy=multi-user.target
+
+#Path /etc/systemd/system/gnome-post-install.service
