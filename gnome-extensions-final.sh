@@ -9,3 +9,4 @@ gnome-extensions enable freon@UshakovVasilii_Github.yahoo.com
 systemctl disable gnome-post-install.service 
 rm -f /etc/systemd/system/gnome-post-install.service
 rm -f /gnome-extensions-final.sh
+#rm -r /home/$USER/debianmultiscripts
