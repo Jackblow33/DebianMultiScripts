@@ -1,0 +1,12 @@
+--- metadata.json	2025-04-06 12:38:22.571162921 -0400
++++ metadata48.json	2025-04-06 12:40:11.080827397 -0400
+@@ -2,7 +2,8 @@
+     "shell-version": [
+         "45",
+         "46",
+-        "47"
++        "47",
++        "48"
+     ],
+     "gettext-domain": "AppIndicatorExtension",
+     "settings-schema": "org.gnome.shell.extensions.appindicator",
