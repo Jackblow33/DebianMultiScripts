@@ -43,7 +43,7 @@ sudo apt update && sudo apt upgrade
 #Packages installer
 for PKG in "${PKGS[@]}"; do
     echo "INSTALLING: ${PKG}"
-    sudo apt install "$PKG" -y #|| sudo pacman -S "$PKG" --noconfirm --needed
+    sudo apt install "$PKG" #-y #|| sudo pacman -S "$PKG" --noconfirm --needed
 done
 
 #remove apps
