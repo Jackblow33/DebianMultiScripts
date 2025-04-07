@@ -10,7 +10,7 @@ cd ~/.local/share/gnome-shell/extensions/
 sudo apt install gnome-shell-extension-dash-to-panel
 gnome-extensions enable dash-to-dock@micxgx.gmail.com
 
-
+#add freon
 
 #Install and setup gnome extensions
 #sudo apt install gnome-shell-extension-dash-to-panel
