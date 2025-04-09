@@ -3,6 +3,7 @@
 Basic custom installation Shell scripts collection for Debian 12 Bookworm and “trixie” Releases.
 
 ISO: https://cdimage.debian.org/cdimage/weekly-builds/amd64/iso-cd/debian-testing-amd64-netinst.iso
+Daily ISO: https://d-i.debian.org/daily-images/amd64/daily/netboot/
 
 ![Screenshot_20250326_211755](https://github.com/user-attachments/assets/1fd8db37-0854-46cd-8222-2959b45fbf86)
 
