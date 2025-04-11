@@ -13,7 +13,7 @@ lscpu | grep Virtualization
 #                                    add check for Intel Amd virtualisation
 read -p "Press enter to start"
 sudo apt update
-apt install qemu-kvm qemu-utils libvirt-daemon-system libvirt-clients virtinst virt-manager
+sudo apt install qemu-kvm qemu-utils libvirt-daemon-system libvirt-clients virtinst virt-manager
 
 
 #Enable libvirtd
